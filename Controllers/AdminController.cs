@@ -9,9 +9,8 @@ namespace ProjectManagementApplication.Controllers
     public class AdminController : Controller
     {
         Dbcontext db = new Dbcontext();
-        public IActionResult Admin() { return View(); }
 
-        public IActionResult AdminDashboard() { return View(); }
+        public IActionResult Index() { return View(); }
         [HttpGet]
         public IActionResult AddProject() { return View("AddProject"); }
         [HttpPost]

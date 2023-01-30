@@ -1,5 +1,5 @@
 ﻿@{
-    Layout = "_LayoutLoginSignup";
+    Layout = "_Layout";
 }
 @{
     ViewData["Title"] = "Home Page";
@@ -10,25 +10,19 @@
 <h1> TOxa</h1>
 <h1> Our Services</h1>
 
-@foreach(var s in Model)
-{
-    <div class="purchased-services">
-  
-        <p>@s.Name</p>
-        <p>@s.Description</p>
-        <p>@s.Charges</p>
-        <div class="sub-btn">
-            <button class="btn btn-info text-center"> <a class="nav-link text-dark" asp-controller="Dashboard" asp-action="PurchaseService">Purchase</a></button>
-        </div>
-    </div>
-         <div class="purchased-services">
+<div class="row row-cols-1 row-cols-md-2 g-4">
+    @foreach (var s in Model)
+    {
 
-            <p>@s.Name</p>
-            <p>@s.Description</p>
-            <p>@s.Charges</p>
-            <div class="sub-btn">
-                <button class="btn btn-info text-center"> <a class="nav-link text-dark" asp-controller="Dashboard" asp-action="PurchaseService">Purchase</a></button>
+        <div class="col">
+            <div class="card">
+                <!--<img src="..." class="card-img-top" alt="..."> -->
+                <div class="card-body">
+                    <h5 class="card-title">@s.Name</h5>
+                    <p class="card-text">@s.Description</p>
+                    <p class="card-text">@s.Charges</p>
+                </div>
             </div>
         </div>
-}
-
+    }
+</div>

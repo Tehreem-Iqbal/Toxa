@@ -10,7 +10,7 @@ namespace ProjectManagementApplication.Controllers
     public class DashboardController : Controller
     {
         Dbcontext db = new Dbcontext();
-        public IActionResult Dashboard(User u)
+        public IActionResult Index(User u)
         {
             IEnumerable<Project> ProjectList = db.Project;
             List<Project> UserProjects = new List<Project>();

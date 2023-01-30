@@ -1,0 +1,107 @@
+﻿@{
+    Layout = "_LayoutDashoard";
+}
+@model List<ProjectManagementApplication.Models.Project>
+
+<div>
+    <!-- Welcome Section Starts -->
+    <div class="app-welcome">
+        <h1 class="welcome-title">Welcome back, Tehreem!</h1>
+        <p class="welcome-text">Here's what's happening with your projects today.</p>
+    </div>
+    <!-- Welcome Section Ends -->
+    <!-- App Content Starts -->
+    <div class="projects-section">
+        <div class="projects-section-header">
+            <p>My Projects</p>
+            <input class="search-input text-dark" type="text" placeholder="Search">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="feather feather-search" viewBox="0 0 24 24">
+                <defs></defs>
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="M21 21l-4.35-4.35"></path>
+            </svg>
+            <p class="time">@DateTime.Now <p>
+        </div>
+        <div class="projects-section-line">
+            <div class="projects-status">
+                <div class="item-status">
+                    <span class="status-type">In Progress</span>
+                    <span class="status-number">  </span>
+                        
+                </div>
+                <div class="item-status">
+                    <span class="status-type">Total Projects</span>
+                    <span class="status-number">@Model.Count</span>         
+                </div>
+            </div>
+            <div class="view-actions">
+                <button class="view-btn list-view" title="List View">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-list">
+                        <line x1="8" y1="6" x2="21" y2="6" />
+                        <line x1="8" y1="12" x2="21" y2="12" />
+                        <line x1="8" y1="18" x2="21" y2="18" />
+                        <line x1="3" y1="6" x2="3.01" y2="6" />
+                        <line x1="3" y1="12" x2="3.01" y2="12" />
+                        <line x1="3" y1="18" x2="3.01" y2="18" />
+                    </svg>
+                </button>
+                <button class="view-btn grid-view active" title="Grid View">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-grid">
+                        <rect x="3" y="3" width="7" height="7" />
+                        <rect x="14" y="3" width="7" height="7" />
+                        <rect x="14" y="14" width="7" height="7" />
+                        <rect x="3" y="14" width="7" height="7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="project-boxes jsGridView">
+            @foreach(var p in Model)
+            {
+
+                <div class="project-box-wrapper">
+                    <div class="project-box" style="background-color: #fee4cb;">
+                        <div class="project-box-header">
+                            <span>DateTime.Now.ToShortDateString()</span>
+                            <div class="more-wrapper">
+                                <button class="project-btn-more">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
+                                        <circle cx="12" cy="12" r="1" />
+                                        <circle cx="12" cy="5" r="1" />
+                                        <circle cx="12" cy="19" r="1" />
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="project-box-content-header">
+                            <p class="box-content-header">@p.Name </p>
+                            <p class="box-content-subheader">@p.Description</p>
+                        </div>
+                        <div class="box-progress-wrapper">
+                            <p class="box-progress-header">Progress</p>
+                            <div class="box-progress-bar">
+                                <span class="box-progress" style="width: 60%; background-color: #ff942e"></span>
+                            </div>
+                            <p class="box-progress-percentage">@p.CompletionRate + "%"</p>
+                        </div>
+                        <div class="project-box-footer">
+                            <div class="participants">
+                                <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2550&q=80" alt="participant">
+                                <img src="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTB8fG1hbnxlbnwwfHwwfA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=900&q=60" alt="participant">
+                                <button class="add-participant" style="color: #ff942e;">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus">
+                                        <path d="M12 5v14M5 12h14" />
+                                    </svg>
+                                </button>
+                            </div>
+                            <div class="days-left" style="color: #ff942e;">
+                                2 Days Left
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>

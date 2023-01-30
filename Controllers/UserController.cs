@@ -77,9 +77,9 @@ namespace ProjectManagementApplication.Controllers
                     {
                         if (u.Password.Equals(user.Password))
                         {
-                            if (u.UserType)
-                            {   addCookie(u); return RedirectToAction("AdminDashboard", "Admin" ,u);   }
-                            else { addCookie(u);  return RedirectToAction("Dashboard", "Dashboard", u); }
+                            addCookie(u);
+                            return (u.UserType) ?  RedirectToAction("Index", "Admin") : RedirectToAction("Dashboard", "Dashboard");
+                            
                         }
                     }
                 }
