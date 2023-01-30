@@ -1,0 +1,61 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<head>
+    <link href="~/lib/bootstrap/dist/css/custom.css" rel="stylesheet" />
+</head>
+
+<header>
+    <div class="p-3 mb-2 bg-light">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Toxa</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex ">
+                    <ul class="navbar-nav flex-grow-1">
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Services">Services</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="SignUp">Signup</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="Login">Login</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
+
+<h1 class="display-4"> Who we are </h1>
+<div class="about-us-section">
+    <p>
+        Toxa is a cutting-edge technology company that specializes in developing innovative solutions
+        for businesses and organizations. Our team of experts use the latest advancements in
+        artificial intelligence, data analytics, and software development to deliver customized
+        products that help our clients stay ahead of the curve. With a focus on customer service
+        and a dedication to excellence, Toxa is committed to helping our clients achieve their
+        goals and drive growth in the ever-evolving digital landscape.
+    </p>
+</div>
+<!--
+
+<div class="Our-Mission">
+    <h2>Our Mission</h2>
+    <p>
+        "At Toxa, our mission is to empower businesses and individuals with cutting-edge technology solutions.
+        We strive to stay at the forefront of innovation in the tech industry, offering a wide range of products
+        and services designed to streamline operations, increase productivity, and drive growth. Whether it's through
+        our powerful software or our expert consulting services, we are dedicated to helping our clients
+        unlock the full potential of technology in their operations. At Toxa, we believe that by harnessing
+        the power of technology, we can help build a better, more connected world for everyone."
+    </p>
+</div>
+
+-->

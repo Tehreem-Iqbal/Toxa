@@ -1,0 +1,34 @@
+﻿@{
+    Layout = "_LayoutLoginSignup";
+}
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+@model List<ProjectManagementApplication.Models.Service>
+
+<h1> TOxa</h1>
+<h1> Our Services</h1>
+
+@foreach(var s in Model)
+{
+    <div class="purchased-services">
+  
+        <p>@s.Name</p>
+        <p>@s.Description</p>
+        <p>@s.Charges</p>
+        <div class="sub-btn">
+            <button class="btn btn-info text-center"> <a class="nav-link text-dark" asp-controller="Dashboard" asp-action="PurchaseService">Purchase</a></button>
+        </div>
+    </div>
+         <div class="purchased-services">
+
+            <p>@s.Name</p>
+            <p>@s.Description</p>
+            <p>@s.Charges</p>
+            <div class="sub-btn">
+                <button class="btn btn-info text-center"> <a class="nav-link text-dark" asp-controller="Dashboard" asp-action="PurchaseService">Purchase</a></button>
+            </div>
+        </div>
+}
+
