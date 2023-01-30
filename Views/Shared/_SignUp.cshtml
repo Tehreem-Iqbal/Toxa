@@ -1,0 +1,21 @@
+﻿@using ProjectManagementApplication.Models;
+@model User;
+
+<label asp-for="UserEmail">Email</label>
+<input asp-for="UserEmail" type="email" class="form-control" placeholder="Enter your email">
+<span asp-validation-for="UserEmail" class="text-danger"></span>
+
+
+<label asp-for="UserName">UserName</label>
+<input asp-for="UserName" type="text" class="form-control" placeholder="Enter username">
+<span asp-validation-for="UserName" class="text-danger"></span>
+
+
+<label asp-for="Password">Password</label>
+<input asp-for="Password" type="password" class="form-control" placeholder="Enter a password">
+<span asp-validation-for="Password" class="text-danger"></span>
+
+
+<label asp-for="Phone">Phone</label>
+<input asp-for="Phone" type="tel" class="form-control" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+<span asp-validation-for="Phone" class="text-danger"></span>

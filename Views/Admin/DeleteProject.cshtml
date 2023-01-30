@@ -1,0 +1,26 @@
+﻿@using ProjectManagementApplication.Models;
+@model Project;
+
+@{
+    Layout = "_LayoutLoginSignup";
+}
+
+<div class="signup-container">
+    <div class="signup">
+        <h1 class="text-center">Add Project</h1>
+        <form method="post" action="DeleteProject">
+
+            <div class="form-group">
+
+                <label asp-for="ProjectId"> Enter project Id </label>
+                <input asp-for="ProjectId" type="number" class="form-control">
+                <span asp-validation-for="ProjectId" class="text-danger"></span>
+              
+            </div>
+            <div class="sub-btn">
+                <button type="submit" class="btn btn-primary text-center">Delete</button>
+            </div>
+
+        </form>
+    </div>
+</div>

@@ -1,0 +1,27 @@
+﻿@using ProjectManagementApplication.Models;
+@model User;
+@{
+    Layout = "_LayoutLoginSignup";
+}
+<div>
+    <span class="text-dark text-center "> @ViewBag.success</span>
+</div>
+<div class="login">
+    <h1 class="text-center">Log In</h1>
+    <form method="post" action="Login">
+        <div class="form-group">
+            <label asp-for="UserEmail">Email</label>
+            <input asp-for="UserEmail" type="email" class="form-control" placeholder="Enter your email">
+            <span asp-validation-for="UserEmail" class="text-danger"></span>
+
+
+            <label asp-for="Password">Password</label>
+            <input asp-for="Password" type="password" class="form-control" placeholder="Enter your password">
+            <span asp-validation-for="Password" class="text-danger"></span>
+        </div>
+        <span class="text-danger"> @ViewBag.msg</span>
+        <div class="sub-btn">
+            <button type="submit" class="btn btn-info text-center">Login</button>
+        </div>
+    </form>
+</div>
