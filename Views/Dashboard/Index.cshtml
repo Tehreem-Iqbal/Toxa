@@ -6,7 +6,7 @@
 <div>
     <!-- Welcome Section Starts -->
     <div class="app-welcome">
-        <h1 class="welcome-title">Welcome back, Tehreem!</h1>
+        <h1 class="welcome-title">Welcome back, Ali </h1>
         <p class="welcome-text">Here's what's happening with your projects today.</p>
     </div>
     <!-- Welcome Section Ends -->
@@ -20,18 +20,18 @@
                 <circle cx="11" cy="11" r="8"></circle>
                 <path d="M21 21l-4.35-4.35"></path>
             </svg>
-            <p class="time">@DateTime.Now <p>
+            <p class="time">@DateTime.Today<p>
         </div>
         <div class="projects-section-line">
             <div class="projects-status">
                 <div class="item-status">
                     <span class="status-type">In Progress</span>
-                    <span class="status-number">  </span>
+                    <span class="status-number">@Model.Count()</span>
                         
                 </div>
                 <div class="item-status">
                     <span class="status-type">Total Projects</span>
-                    <span class="status-number">@Model.Count</span>         
+                    <span class="status-number">@Model.Count()</span>         
                 </div>
             </div>
             <div class="view-actions">
@@ -62,7 +62,7 @@
                 <div class="project-box-wrapper">
                     <div class="project-box" style="background-color: #fee4cb;">
                         <div class="project-box-header">
-                            <span>DateTime.Now.ToShortDateString()</span>
+                            <span>@DateTime.Today</span>
                             <div class="more-wrapper">
                                 <button class="project-btn-more">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-more-vertical">
@@ -82,7 +82,7 @@
                             <div class="box-progress-bar">
                                 <span class="box-progress" style="width: 60%; background-color: #ff942e"></span>
                             </div>
-                            <p class="box-progress-percentage">@p.CompletionRate + "%"</p>
+                            <p class="box-progress-percentage">@p.CompletionRate %</p>
                         </div>
                         <div class="project-box-footer">
                             <div class="participants">

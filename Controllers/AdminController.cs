@@ -10,9 +10,20 @@ namespace ProjectManagementApplication.Controllers
     {
         Dbcontext db = new Dbcontext();
 
-        public IActionResult Index() { return View(); }
+        public IActionResult Index() {
+            object errormsg;
+
+            if (!HttpContext.Request.Cookies.ContainsKey("userid"))
+            {
+                errormsg = "YOU ARE NOT LOGGED IN";
+                TempData["login_error"] = errormsg;
+                return RedirectToAction("Login", "User", errormsg);
+            }
+
+            return View();
+        }
         [HttpGet]
-        public IActionResult AddProject() { return View("AddProject"); }
+        public IActionResult AddProject() { return View(); }
         [HttpPost]
         public IActionResult AddProject(Project project)
         {
@@ -20,10 +31,10 @@ namespace ProjectManagementApplication.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    db.Project.Add(project);
-                    db.SaveChanges();
+                    ProjectRepository repo = new ProjectRepository();
+                    repo.AddProject(project);
                     TempData["success"] = "Project added successfully";
-                    return RedirectToAction("Admin");
+                    return RedirectToAction("Index", "Admin");
                 }
             }
             catch (DataException)

@@ -1,0 +1,39 @@
+﻿@using ProjectManagementApplication.Models;
+@model User;
+@{
+    Layout = "_LayoutLoginSignup";
+}
+<div class="login-container">
+    <div class="login">
+        <h1 class="text-center">Register</h1>
+        <form method="post" action="Login" runat="server" EncType="multipart/form-data">
+            <span class="text-dark text-center"> @ViewBag.success</span>
+            <span class="text-danger text-center"> @TempData["login_error"]</span>
+            <div class="form-group">
+                <label asp-for="UserEmail">Email</label>
+                <input asp-for="UserEmail" type="email" class="form-control" placeholder="email">
+                <span asp-validation-for="UserEmail" class="text-danger"></span>
+
+                <label asp-for="UserName">UserName</label>
+                <input asp-for="UserName" type="text" class="form-control" placeholder="username">
+                <span asp-validation-for="UserName" class="text-danger"></span>
+
+                <label asp-for="UserName">UserName</label>
+                <input asp-for="UserName" type="text" class="form-control" placeholder="Phone">
+                <span asp-validation-for="UserName" class="text-danger"></span>
+
+                <label asp-for="Image" class="form-label">Upload Image</label>
+                <input asp-for="Image" class="form-control" type="file">
+                <span asp-validation-for="Image" class="text-danger"></span>
+            </div>
+            <span class="text-danger"> @ViewBag.msg</span>
+            <div class="sub-btn">
+                <button type="submit" class="btn btn-info text-center">Login</button>
+            </div>
+        </form>
+        <div>
+            <p class="text-black text-center">Don't have an account? <a class="nav-link text-dark text-center" asp-area="" asp-controller="User" asp-action="SignUp">SignUp</a></p>
+        </div>
+    </div>
+
+</div>

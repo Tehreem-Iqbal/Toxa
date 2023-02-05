@@ -23,6 +23,8 @@ namespace ProjectManagementApplication.Models
         [Required(ErrorMessage = "This field is required")]
         public string? Password { get; set; } = string.Empty;
 
-
+        public bool IsRegistered { get; set; }
+        [Required]
+        public IFormFile? Image { get; set; }
     }
 }

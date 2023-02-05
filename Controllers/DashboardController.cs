@@ -12,6 +12,15 @@ namespace ProjectManagementApplication.Controllers
         Dbcontext db = new Dbcontext();
         public IActionResult Index(User u)
         {
+            object errormsg;
+
+            if (!HttpContext.Request.Cookies.ContainsKey("userid"))
+            {
+                errormsg = "YOU ARE NOT LOGGED IN";
+                TempData["login_error"] = errormsg;
+                return RedirectToAction("Login","User",errormsg);
+            }
+
             IEnumerable<Project> ProjectList = db.Project;
             List<Project> UserProjects = new List<Project>();
             foreach (Project p in ProjectList)
@@ -21,6 +30,7 @@ namespace ProjectManagementApplication.Controllers
                     UserProjects.Add(p);
                 }
             }
+            
             return View(UserProjects);
         }
 
@@ -51,6 +61,5 @@ namespace ProjectManagementApplication.Controllers
             return View("Services");
 
         }
-
     }
 }

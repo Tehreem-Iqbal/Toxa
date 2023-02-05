@@ -6,28 +6,26 @@
 <div class="login-container">
     <div class="login">
         <h1 class="text-center">Log In</h1>
-        <form method="post" action="Login">
-             <div>
-    <span class="text-dark text-center "> @ViewBag.success</span>
-</div>
-<div class="form-group">
-    <label asp-for="UserEmail">Email</label>
-    <input asp-for="UserEmail" type="email" class="form-control" placeholder="Enter your email">
-    <span asp-validation-for="UserEmail" class="text-danger"></span>
+        <form method="post" action="Login">   
+        <span class="text-dark text-center"> @ViewBag.success</span>
+        <span class="text-danger text-center"> @TempData["login_error"]</span>
+    <div class="form-group">
+        <label asp-for="UserEmail">Email</label>
+        <input asp-for="UserEmail" type="email" class="form-control" placeholder="Enter your email">
+        <span asp-validation-for="UserEmail" class="text-danger"></span>
 
-    <label asp-for="Password">Password</label>
-    <input asp-for="Password" type="password" class="form-control" placeholder="Enter your password">
-    <span asp-validation-for="Password" class="text-danger"></span>
-</div>// 
-<span class="text-danger"> @ViewBag.msg</span>
-<div class="sub-btn">
-    <button type="submit" class="btn btn-info text-center">Login</button>
-</div>
-
+        <label asp-for="Password">Password</label>
+        <input asp-for="Password" type="password" class="form-control" placeholder="Enter your password">
+        <span asp-validation-for="Password" class="text-danger"></span>
+    </div>
+    <span class="text-danger"> @ViewBag.msg</span>
+    <div class="sub-btn">
+        <button type="submit" class="btn btn-info text-center">Login</button>
+    </div>
         </form>
         <div>
-            <p class="text-black">Don't have an account?</p>
-            <a class="nav-link text-dark" asp-area="" asp-controller="User" asp-action="SignUp">SignUp</a>
+            <p class="text-black text-center">Don't have an account? <a class="nav-link text-dark text-center" asp-area="" asp-controller="User" asp-action="SignUp">SignUp</a></p>
+            
         </div>
     </div>
     

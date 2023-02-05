@@ -1,28 +1,12 @@
 ﻿@{
-    Layout = "_Layout";
-}
-@{
     ViewData["Title"] = "Home Page";
 }
 
 @model List<ProjectManagementApplication.Models.Service>
 
-<h1> TOxa</h1>
-<h1> Our Services</h1>
-
-<div class="row row-cols-1 row-cols-md-2 g-4">
-    @foreach (var s in Model)
-    {
-
-        <div class="col">
-            <div class="card">
-                <!--<img src="..." class="card-img-top" alt="..."> -->
-                <div class="card-body">
-                    <h5 class="card-title">@s.Name</h5>
-                    <p class="card-text">@s.Description</p>
-                    <p class="card-text">@s.Charges</p>
-                </div>
-            </div>
-        </div>
-    }
+<div class="p-3 mb-2 bg-info text-dark text-center">
+    <h1> Toxa</h1>
+    <h1> Our Services</h1>
 </div>
+
+<Partial Name="_Services" />

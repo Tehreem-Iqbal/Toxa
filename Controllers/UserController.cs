@@ -17,7 +17,7 @@ namespace ProjectManagementApplication.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult SignUp(User user) //Add customer
+        public IActionResult SignUp(User user)
         {
             object errormsg, successmsg;
   
@@ -29,17 +29,17 @@ namespace ProjectManagementApplication.Controllers
                     else
                     {
                         user.UserType = false;
-                        db.Users.Add(user);
-                        db.SaveChanges();
+                        UserRepository repo = new UserRepository();
+                        repo.AddUser(user);
                         successmsg = "Account created successfully";
                         ViewBag.success = successmsg;
                         return View("Login");
                     }
                 }
             }
-            catch (DataException)
+            catch (Exception ex)
             {
-                ModelState.AddModelError("", "Unable to create account. Try again, and if the problem persists contact system administrator.");
+                ModelState.AddModelError("", ex + "ERROR: Unable to create account. Try again, and if the problem persists contact system administrator.");
             }
             return View(user); 
         }
@@ -66,11 +66,11 @@ namespace ProjectManagementApplication.Controllers
         [HttpPost]
         public IActionResult Login(User user) //Aauthenticate
         {
-
             try
             {
                 object errormsg;
-                IEnumerable<User> CustomersList = db.Users;
+                IEnumerable<User> CustomersList = (new UserRepository()).RetrieveUsers();
+               
                 foreach (User u in CustomersList)
                 {
                     if (u.UserEmail.Equals(user.UserEmail))
@@ -78,7 +78,7 @@ namespace ProjectManagementApplication.Controllers
                         if (u.Password.Equals(user.Password))
                         {
                             addCookie(u);
-                            return (u.UserType) ?  RedirectToAction("Index", "Admin") : RedirectToAction("Dashboard", "Dashboard");
+                            return (u.UserType) ?  RedirectToAction("Index", "Admin",u) : RedirectToAction("Index", "Dashboard", u);
                             
                         }
                     }
@@ -87,16 +87,50 @@ namespace ProjectManagementApplication.Controllers
                 ViewBag.msg = errormsg;
                 return View("Login");
             }
-            catch (Exception ex) { ModelState.AddModelError("", "Unable to login. Try again, and if the problem persists contact system administrator."); }
+            catch (Exception ex) { ModelState.AddModelError("", ex + "Unable to login. Try again, and if the problem persists contact system administrator."); }
             return View("Login");
         }
 
         [NonAction]
         public void addCookie(User user)
         {
-            Response.Cookies.Append("userid", user.UserId.ToString());
-            Response.Cookies.Append("email", user.UserEmail);
-        }
+            CookieOptions options = new CookieOptions();
+            options.Expires = DateTime.Now.AddMinutes(30);
 
+            Response.Cookies.Append("userid", user.UserId.ToString());
+            Response.Cookies.Append("usertype", user.UserType.ToString());
+        }
+        [HttpGet]
+        public IActionResult Register()
+        {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Register(User user)
+        {
+            object errormsg, successmsg;
+
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    if (DuplicateCheck(user.UserEmail)) { errormsg = "User already registered"; ViewBag.msg = errormsg; return View(user); }
+                    else
+                    {
+                        user.UserType = false;
+                        UserRepository repo = new UserRepository();
+                        repo.AddUser(user);
+                        successmsg = "Account created successfully";
+                        ViewBag.success = successmsg;
+                        return View("Login");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                ModelState.AddModelError("", ex + "ERROR: Unable to create account. Try again, and if the problem persists contact system administrator.");
+            }
+            return View(user);
+        }
     }
 }

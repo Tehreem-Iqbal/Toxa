@@ -1,0 +1,19 @@
+﻿@model List<ProjectManagementApplication.Models.Service>
+
+<div class="row row-cols-1 row-cols-md-2 g-4 bg-light">
+    @foreach (var s in Model)
+    {
+
+        <div class="col">
+            <div class="card">
+                <!--<img src="..." class="card-img-top" alt="..."> -->
+                <div class="card-body">
+                    <h5 class="card-title">@s.Name</h5>
+                    <p class="card-text">@s.Description</p>
+                    <p class="card-text">@s.Charges</p>
+                </div>
+                <!--<button type="submit" class="btn btn-info text-center"> <a class="nav-link text-dark" asp-area="" asp-controller="Dashboard" asp-action="PurchaseService">PurchaseService</a> </button>-->
+            </div>
+        </div>
+    }
+</div>

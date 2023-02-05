@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Ali Raza\\Documents\\ead-proj\\Toxa\\ProjectManagementApplication.csproj": {}
+    "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\ProjectManagementApplication.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Ali Raza\\Documents\\ead-proj\\Toxa\\ProjectManagementApplication.csproj": {
+    "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\ProjectManagementApplication.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Ali Raza\\Documents\\ead-proj\\Toxa\\ProjectManagementApplication.csproj",
+        "projectUniqueName": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\ProjectManagementApplication.csproj",
         "projectName": "ProjectManagementApplication",
-        "projectPath": "C:\\Users\\Ali Raza\\Documents\\ead-proj\\Toxa\\ProjectManagementApplication.csproj",
-        "packagesPath": "C:\\Users\\Ali Raza\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Ali Raza\\Documents\\ead-proj\\Toxa\\obj\\",
+        "projectPath": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\ProjectManagementApplication.csproj",
+        "packagesPath": "C:\\Users\\tehre\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Ali Raza\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\tehre\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -70,7 +70,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
         }
       }
     }

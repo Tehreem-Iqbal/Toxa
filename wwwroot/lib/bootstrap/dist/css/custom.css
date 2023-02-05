@@ -778,6 +778,7 @@ button, a {
 
 .login-container, .signup-container {
     color: var(--app-container);
+    margin-top: 100px;
 }
 
 .sub-btn {
@@ -799,7 +800,7 @@ button, a {
     border-radius: 32px;
     padding: 32px 32px 0 32px;
     height: 40%;
-    margin-top: 50px;
+    margin-top: 30px;
     position: absolute;
     width: 70%;
     margin-left: 70px;
