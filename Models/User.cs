@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Numerics;
 
 namespace ProjectManagementApplication.Models
@@ -23,8 +24,8 @@ namespace ProjectManagementApplication.Models
         [Required(ErrorMessage = "This field is required")]
         public string? Password { get; set; } = string.Empty;
 
-        public bool IsRegistered { get; set; }
         [Required]
+        [NotMapped]
         public IFormFile? Image { get; set; }
     }
 }

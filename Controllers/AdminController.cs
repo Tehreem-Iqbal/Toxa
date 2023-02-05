@@ -7,9 +7,7 @@ using System.Linq;
 namespace ProjectManagementApplication.Controllers
 {
     public class AdminController : Controller
-    {
-        Dbcontext db = new Dbcontext();
-
+    { 
         public IActionResult Index() {
             object errormsg;
 
@@ -31,8 +29,7 @@ namespace ProjectManagementApplication.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    ProjectRepository repo = new ProjectRepository();
-                    repo.AddProject(project);
+                    ProjectRepository.AddProject(project);
                     TempData["success"] = "Project added successfully";
                     return RedirectToAction("Index", "Admin");
                 }
@@ -50,14 +47,13 @@ namespace ProjectManagementApplication.Controllers
         [HttpPost]
         public IActionResult DeleteProject(int id)
         {
-            var obj = db.Project.Find(id);
+            var obj = ProjectRepository.RetrieveProject(id);
             if (obj == null)
             {
                 return NotFound();
             }
 
-            db.Project.Remove(obj);
-            db.SaveChanges();
+            ProjectRepository.RemoveProject(obj);
             TempData["success"] = "Project deleted successfully";
             return RedirectToAction("Index");
         }
@@ -66,14 +62,13 @@ namespace ProjectManagementApplication.Controllers
         [HttpPost]
         public IActionResult DeleteUser(int id)
         {
-            var obj = db.Users.Find(id);
+            var obj = UserRepository.RetrieveUser(id);
             if (obj == null)
             {
                 return NotFound();
             }
 
-            db.Users.Remove(obj);
-            db.SaveChanges();
+            UserRepository.RemoveUser(obj);
             TempData["success"] = "Project deleted successfully";
             return RedirectToAction("Index");
         }
@@ -87,8 +82,7 @@ namespace ProjectManagementApplication.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    db.Service.Add(service);
-                    db.SaveChanges();
+                    ServiceRepository.AddService(service)
                     successmsg = "Service added successfully";
                     ViewBag.success = successmsg;
                     return View("AdminDashboard");

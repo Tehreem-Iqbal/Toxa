@@ -9,8 +9,12 @@ namespace ProjectManagementApplication.Controllers
 {
     public class UserController : Controller
     {
-      
-        Dbcontext db = new Dbcontext();
+        private readonly IWebHostEnvironment Environment;
+        public UserController(IWebHostEnvironment environment)
+        {
+            Environment = environment;
+        }    
+
         [HttpGet]
         public IActionResult SignUp()
         {
@@ -20,7 +24,7 @@ namespace ProjectManagementApplication.Controllers
         public IActionResult SignUp(User user)
         {
             object errormsg, successmsg;
-  
+ 
             try
             {
                 if (ModelState.IsValid)
@@ -29,11 +33,15 @@ namespace ProjectManagementApplication.Controllers
                     else
                     {
                         user.UserType = false;
-                        UserRepository repo = new UserRepository();
-                        repo.AddUser(user);
-                        successmsg = "Account created successfully";
-                        ViewBag.success = successmsg;
-                        return View("Login");
+                        
+                        UserRepository.AddUser(user);
+                        if(FileUpload(user.Image, user.UserName))
+                        {
+                            successmsg = "Account created successfully";
+                            ViewBag.success = successmsg;
+                            return View("Login");
+                        }
+                                         
                     }
                 }
             }
@@ -45,9 +53,10 @@ namespace ProjectManagementApplication.Controllers
         }
 
         [NonAction]
-        public bool DuplicateCheck(string email)
+        public bool DuplicateCheck(string? email)
         {
-            IEnumerable<User> CustomersList = db.Users;
+            
+            IEnumerable<User> CustomersList = UserRepository.RetrieveUsers();
             foreach (User u in CustomersList)
             {
                 if (email.Equals(u.UserEmail))
@@ -69,7 +78,7 @@ namespace ProjectManagementApplication.Controllers
             try
             {
                 object errormsg;
-                IEnumerable<User> CustomersList = (new UserRepository()).RetrieveUsers();
+                IEnumerable<User> CustomersList = UserRepository.RetrieveUsers();
                
                 foreach (User u in CustomersList)
                 {
@@ -100,37 +109,44 @@ namespace ProjectManagementApplication.Controllers
             Response.Cookies.Append("userid", user.UserId.ToString());
             Response.Cookies.Append("usertype", user.UserType.ToString());
         }
-        [HttpGet]
-        public IActionResult Register()
-        {
-            return View();
-        }
-        [HttpPost]
-        public IActionResult Register(User user)
-        {
-            object errormsg, successmsg;
 
+        [NonAction]
+        public bool FileUpload(IFormFile? file, string? username)
+        {
+            Console.WriteLine("upload1");
+            string path = "";
             try
-            {
-                if (ModelState.IsValid)
+            {        
+                if (file.Length > 0)
                 {
-                    if (DuplicateCheck(user.UserEmail)) { errormsg = "User already registered"; ViewBag.msg = errormsg; return View(user); }
-                    else
-                    {
-                        user.UserType = false;
-                        UserRepository repo = new UserRepository();
-                        repo.AddUser(user);
-                        successmsg = "Account created successfully";
-                        ViewBag.success = successmsg;
-                        return View("Login");
+                    string wwwPath = this.Environment.WebRootPath;
+                    string userdir = "Users/" + username;
+                    path = Path.GetFullPath(Path.Combine(wwwPath , userdir));
+
+                    Console.WriteLine(path);
+                    if (!Directory.Exists(path))
+                    { 
+                        Directory.CreateDirectory(path);
+                        Console.WriteLine("dir created");
                     }
+                    using (var fileStream = new FileStream(Path.Combine(path, file.FileName), FileMode.Create))
+                    {
+                        file.CopyTo(fileStream);
+                    }
+                    Console.WriteLine("upload2");
+                    return true;
+                }
+                else
+                {
+                    return false;
                 }
             }
             catch (Exception ex)
             {
-                ModelState.AddModelError("", ex + "ERROR: Unable to create account. Try again, and if the problem persists contact system administrator.");
+                throw new Exception("Failed saving file", ex);
             }
-            return View(user);
         }
+
+      
     }
 }

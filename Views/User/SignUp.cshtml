@@ -7,7 +7,7 @@
 <div class="signup-container">
     <div class="signup">
         <h1 class="text-center">Sign Up</h1>
-        <form method="post" action="SignUp">
+        <form method="post" action="SignUp" enctype="multipart/form-data">
 
             <div class="form-group">
 
@@ -29,6 +29,10 @@
                 <label asp-for="Phone">Phone</label>
                 <input asp-for="Phone" type="tel" class="form-control" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
                 <span asp-validation-for="Phone" class="text-danger"></span>
+
+                <label asp-for="Image" class="form-label">Upload Image</label>
+                <input asp-for="Image" class="form-control" type="file">
+                <span asp-validation-for="Image" class="text-danger"></span>
             </div>
             <span class="text-danger"> @ViewBag.msg</span>
             <div class="sub-btn">

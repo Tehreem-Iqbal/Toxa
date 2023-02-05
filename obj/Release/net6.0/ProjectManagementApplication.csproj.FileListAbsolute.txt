@@ -1,0 +1,8 @@
+C:\Users\tehre\Desktop\repos\Toxa\obj\Release\net6.0\ProjectManagementApplication.csproj.AssemblyReference.cache
+C:\Users\tehre\Desktop\repos\Toxa\obj\Release\net6.0\ProjectManagementApplication.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\tehre\Desktop\repos\Toxa\obj\Release\net6.0\ProjectManagementApplication.AssemblyInfoInputs.cache
+C:\Users\tehre\Desktop\repos\Toxa\obj\Release\net6.0\ProjectManagementApplication.AssemblyInfo.cs
+C:\Users\tehre\Desktop\repos\Toxa\obj\Release\net6.0\ProjectManagementApplication.csproj.CoreCompileInputs.cache
+C:\Users\tehre\Desktop\repos\Toxa\obj\Release\net6.0\ProjectManagementApplication.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\tehre\Desktop\repos\Toxa\obj\Release\net6.0\ProjectManagementApplication.RazorAssemblyInfo.cache
+C:\Users\tehre\Desktop\repos\Toxa\obj\Release\net6.0\ProjectManagementApplication.RazorAssemblyInfo.cs
