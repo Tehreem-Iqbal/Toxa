@@ -3,7 +3,9 @@ using ProjectManagementApplication.Data;
 using ProjectManagementApplication.Models;
 using System.Data;
 using System.Globalization;
+using System.IO;
 using System.Linq;
+using System.Text.Json;
 
 namespace ProjectManagementApplication.Controllers
 {
@@ -23,26 +25,23 @@ namespace ProjectManagementApplication.Controllers
         [HttpPost]
         public IActionResult SignUp(User user)
         {
-            object errormsg, successmsg;
- 
             try
             {
                 if (ModelState.IsValid)
                 {
-                    if (DuplicateCheck(user.UserEmail)) {  errormsg = "User already exists"; ViewBag.msg = errormsg;  return View(user); }
-                    else
-                    {
-                        user.UserType = false;
-                        
-                        UserRepository.AddUser(user);
-                        if(FileUpload(user.Image, user.UserName))
-                        {
-                            successmsg = "Account created successfully";
-                            ViewBag.success = successmsg;
-                            return View("Login");
-                        }
-                                         
-                    }
+                    user.UserType = false;
+
+                    string path = "";
+                    string wwwPath = this.Environment.WebRootPath;
+                    string userdir = "Uploads/Users/" + user.UserName;
+                    userdir = Path.GetFullPath(Path.Combine(wwwPath, userdir));
+                    user.ImageURL = userdir + "/" + user.Image.FileName;
+
+                    
+
+
+                    ViewBag.msg = UserRepository.AddUser(user);
+                    return View("Login");              
                 }
             }
             catch (Exception ex)
@@ -50,21 +49,6 @@ namespace ProjectManagementApplication.Controllers
                 ModelState.AddModelError("", ex + "ERROR: Unable to create account. Try again, and if the problem persists contact system administrator.");
             }
             return View(user); 
-        }
-
-        [NonAction]
-        public bool DuplicateCheck(string? email)
-        {
-            
-            IEnumerable<User> CustomersList = UserRepository.RetrieveUsers();
-            foreach (User u in CustomersList)
-            {
-                if (email.Equals(u.UserEmail))
-                {
-                    return true;  
-                }
-            }
-            return false;
         }
 
         [HttpGet]
@@ -78,16 +62,18 @@ namespace ProjectManagementApplication.Controllers
             try
             {
                 object errormsg;
-                IEnumerable<User> CustomersList = UserRepository.RetrieveUsers();
+                IEnumerable<User> UsersList = UserRepository.RetrieveUsers();
                
-                foreach (User u in CustomersList)
+                foreach (User _user in UsersList)
                 {
-                    if (u.UserEmail.Equals(user.UserEmail))
+                    if (_user.UserEmail.Equals(user.UserEmail))
                     {
-                        if (u.Password.Equals(user.Password))
+                        if (_user.Password.Equals(user.Password))
                         {
-                            addCookie(u);
-                            return (u.UserType) ?  RedirectToAction("Index", "Admin",u) : RedirectToAction("Index", "Dashboard", u);
+                            AddCookie(_user);
+                            //HttpContext.Session.SetString("user", JsonSerializer.Serialize(_user));
+                            TempData["user"] =JsonSerializer.Serialize(_user);
+                            return (_user.UserType) ?  RedirectToAction("Index", "Admin",_user) : RedirectToAction("Index", "Dashboard");
                             
                         }
                     }
@@ -101,50 +87,13 @@ namespace ProjectManagementApplication.Controllers
         }
 
         [NonAction]
-        public void addCookie(User user)
+        public void AddCookie(User user)
         {
             CookieOptions options = new CookieOptions();
             options.Expires = DateTime.Now.AddMinutes(30);
 
-            Response.Cookies.Append("userid", user.UserId.ToString());
-            Response.Cookies.Append("usertype", user.UserType.ToString());
-        }
-
-        [NonAction]
-        public bool FileUpload(IFormFile? file, string? username)
-        {
-            Console.WriteLine("upload1");
-            string path = "";
-            try
-            {        
-                if (file.Length > 0)
-                {
-                    string wwwPath = this.Environment.WebRootPath;
-                    string userdir = "Users/" + username;
-                    path = Path.GetFullPath(Path.Combine(wwwPath , userdir));
-
-                    Console.WriteLine(path);
-                    if (!Directory.Exists(path))
-                    { 
-                        Directory.CreateDirectory(path);
-                        Console.WriteLine("dir created");
-                    }
-                    using (var fileStream = new FileStream(Path.Combine(path, file.FileName), FileMode.Create))
-                    {
-                        file.CopyTo(fileStream);
-                    }
-                    Console.WriteLine("upload2");
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
-            }
-            catch (Exception ex)
-            {
-                throw new Exception("Failed saving file", ex);
-            }
+            Response.Cookies.Append("user", user.UserId.ToString()+","+user.UserType.ToString());
+            // Response.Cookies.Append("usertype", user.UserType.ToString());
         }
 
       

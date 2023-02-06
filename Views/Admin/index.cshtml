@@ -4,15 +4,16 @@
 
 <div>
     <h1 class="text-center">Admin Dashboard</h1>
+    <a class="btn btn-info text-center" asp-area="" asp-controller="Admin" asp-action="Logout">Logout</a>
 </div>
 
 <div class="d-grid gap-2 col-6 mx-auto">
     <a class="btn btn-info text-center" asp-area="" asp-controller="Admin" asp-action="AddProject">Add Project</a>
+    <a class="btn btn-info text-center" asp-area="" asp-controller="Admin" asp-action="DisplayAllProjects">Display all projects</a>
     <a class="btn btn-info text-center" asp-area="" asp-controller="Admin" asp-action="DeleteProject">Delete Project</a>
               
     <a class="btn btn-info text-center" asp-area="" asp-controller="Admin" asp-action="DeleteUser">Delete User</a>
     <a class="btn btn-info text-center" asp-area="" asp-controller="Admin" asp-action="DisplayAllUsers">Display all users</a>
               
-    <a class="btn btn-info text-center" asp-area="" asp-controller="Admin" asp-action="DisplayAllProjects">Display all projects</a>
     <a class="btn btn-info text-center" asp-area="" asp-controller="Admin" asp-action="AddService">Add Service</a>
 </div>

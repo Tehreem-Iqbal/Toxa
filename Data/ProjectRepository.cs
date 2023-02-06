@@ -24,6 +24,20 @@ namespace ProjectManagementApplication.Data
             db.Project.Remove(project);
             db.SaveChanges();
         }
+
+        public static List<Project> RetrieveUserProjects(User user)
+        {
+            List<Project> ProjectList = new List<Project>();
+            IEnumerable<Project> AllProjects = db.Project;
+            foreach (Project poject in AllProjects)
+            {
+                if (poject.CustomerId == user.UserId)
+                {
+                    ProjectList.Add(poject);
+                }
+            }
+            return ProjectList;
+        }
     }
 
 }

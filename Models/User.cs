@@ -4,6 +4,7 @@ using System.Numerics;
 
 namespace ProjectManagementApplication.Models
 {
+    [Serializable]
     public class User
     {
      
@@ -24,8 +25,9 @@ namespace ProjectManagementApplication.Models
         [Required(ErrorMessage = "This field is required")]
         public string? Password { get; set; } = string.Empty;
 
-        [Required]
+        
         [NotMapped]
         public IFormFile? Image { get; set; }
+        public string? ImageURL { get; set; }
     }
 }

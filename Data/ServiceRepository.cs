@@ -16,11 +16,17 @@ namespace ProjectManagementApplication.Data
 
             db.SaveChanges();
         }
-        public static Service? RetrieveProject(int id)
+        public static void AddPurchasedService(PurchasedServices service)
+        {
+            db.PurchasedServices.Add(service);
+
+            db.SaveChanges();
+        }
+        public static Service? RetrieveService(int id)
         {
             return db.Service.Find(id);
         }
-        public static void RemoveProject(Service s)
+        public static void RemoveService(Service s)
         {
             db.Service.Remove(s);
             db.SaveChanges();

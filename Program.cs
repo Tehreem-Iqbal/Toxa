@@ -1,7 +1,14 @@
+// Arslan
+// using Microsoft.AspNetCore.Session;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+// Arslan
+// builder.Services.AddDistributedMemoryCache();
+// builder.Services.AddSession();
 
 var app = builder.Build();
 
@@ -15,6 +22,9 @@ if (!app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
+
+// Arslan
+// app.UseSession();
 
 app.UseRouting();
 
