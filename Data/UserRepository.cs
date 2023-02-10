@@ -9,27 +9,37 @@ namespace ProjectManagementApplication.Data
 {
     public class UserRepository
     {
-        private static Dbcontext db = new Dbcontext();
-        public static string AddUser(User user)
+        private readonly HttpContext _httpContext;
+        private Dbcontext db;
+        public UserRepository(HttpContext httpContext, int userId)
+        {
+            db = new Dbcontext();
+            db.userId = userId;
+
+            _httpContext = httpContext;
+        }
+        
+        public string AddUser(User user)
         {
             string msg;
-            if (DuplicateCheck(user.UserEmail)) {
+            if (DuplicateCheck(user.UserEmail!)) {
                 msg = "User already exists";
                 return msg;
             }
-            if (!FileUpload(user.Image, user.ImageURL)) {
+            if (!FileUpload(user.Image!, user.ImageURL!)) {
                 msg = "File Not Uploaded";
                 return msg;
             }
+
             db.Users.Add(user);
             db.SaveChanges();
             msg = "User Added";
             return msg;
         }
-        private static bool DuplicateCheck(string email)
+        private bool DuplicateCheck(string email)
         {
 
-            IEnumerable<User> CustomersList = UserRepository.RetrieveUsers();
+            IEnumerable<User> CustomersList = RetrieveUsers();
             foreach (User u in CustomersList)
             {
                 if (email.Equals(u.UserEmail))
@@ -39,7 +49,7 @@ namespace ProjectManagementApplication.Data
             }
             return false;
         }
-        private static bool FileUpload(IFormFile file, string path)
+        private bool FileUpload(IFormFile file, string path)
         {
             Console.WriteLine("upload1");
             
@@ -73,15 +83,15 @@ namespace ProjectManagementApplication.Data
             }
         }
 
-        public static IEnumerable<User> RetrieveUsers()
+        public IEnumerable<User> RetrieveUsers()
         {
             return db.Users;
         }
-        public static User? RetrieveUser(int id)
+        public User? RetrieveUser(int id)
         {
             return db.Users.Find(id);
         }
-        public static void RemoveUser(User user)
+        public void RemoveUser(User user)
         {
             db.Users.Remove(user);
             db.SaveChanges();

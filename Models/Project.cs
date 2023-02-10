@@ -3,10 +3,8 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ProjectManagementApplication.Models
 {
-    public class Project
+    public class Project : FullAuditModel
     {
-        [Key]
-        public int ProjectId { get; set; }
         [Required]
         public string? Name { get; set; }
         [Required]

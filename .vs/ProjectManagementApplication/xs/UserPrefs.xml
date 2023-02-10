@@ -1,0 +1,40 @@
+﻿<Properties StartupConfiguration="{9E329ABF-7262-48C6-91B9-D41452EBA38F}|Default">
+  <MonoDevelop.Ide.ItemProperties.ProjectManagementApplication PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="ProjectManagementApplication" expanded="True">
+            <Node name="ProjectManagementApplication" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Data" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Admin" expanded="True" />
+                <Node name="Dashboard" expanded="True" />
+                <Node name="Home" expanded="True">
+                  <Node name="Index.cshtml" selected="True" />
+                </Node>
+                <Node name="User" expanded="True" />
+              </Node>
+              <Node name="wwwroot" expanded="True">
+                <Node name="Uploads" expanded="True">
+                  <Node name="Users" expanded="True">
+                    <Node name="th" expanded="True">
+                      <Node name="kaliLinux.png" expanded="True" />
+                    </Node>
+                  </Node>
+                </Node>
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>

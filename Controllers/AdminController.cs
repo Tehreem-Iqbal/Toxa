@@ -51,7 +51,9 @@ namespace ProjectManagementApplication.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    ProjectRepository.AddProject(project);
+                    int userId = int.Parse(HttpContext.Request.Cookies["user"]!.Split(",")[0]);
+                    ProjectRepository repo = new(HttpContext,userId);
+                    repo.AddProject(project);
                     TempData["success"] = "Project added successfully";
                     return RedirectToAction("Index", "Admin");
                 }
@@ -77,14 +79,15 @@ namespace ProjectManagementApplication.Controllers
                 TempData["login_error"] = errormsg;
                 return RedirectToAction("Login", "User", errormsg);
             }
-
-            var obj = ProjectRepository.RetrieveProject(id);
+            int userId = int.Parse(HttpContext.Request.Cookies["user"]!.Split(",")[0]);
+            ProjectRepository repo = new(HttpContext,userId);
+            var obj = repo.RetrieveProject(id);
             if (obj == null)
             {
                 return NotFound();
             }
 
-            ProjectRepository.RemoveProject(obj);
+            repo.RemoveProject(obj);
             TempData["success"] = "Project deleted successfully";
             return RedirectToAction("Index");
         }
@@ -101,25 +104,30 @@ namespace ProjectManagementApplication.Controllers
                 TempData["login_error"] = errormsg;
                 return RedirectToAction("Login", "User", errormsg);
             }
-
-            var obj = UserRepository.RetrieveUser(id);
+            int userId = int.Parse(HttpContext.Request.Cookies["user"]!.Split(",")[0]);
+            UserRepository repo = new(HttpContext,userId);
+            var obj = repo.RetrieveUser(id);
             if (obj == null)
             {
                 return NotFound();
             }
 
-            UserRepository.RemoveUser(obj);
+            repo.RemoveUser(obj);
             TempData["success"] = "Project deleted successfully";
             return RedirectToAction("Index");
         }
         public IActionResult UserDetails(int userid)
         {
-            User user = UserRepository.RetrieveUser(userid)!;
+            int userId = int.Parse(HttpContext.Request.Cookies["user"]!.Split(",")[0]);
+            UserRepository repo = new(HttpContext,userId);
+            User user = repo.RetrieveUser(userid)!;
             return View(user);
         }
         public IActionResult DisplayAllUsers()
         {
-            List<User> users = UserRepository.RetrieveUsers().ToList<User>();
+            int userId = int.Parse(HttpContext.Request.Cookies["user"]!.Split(",")[0]);
+            UserRepository repo = new(HttpContext,userId);
+            List<User> users = repo.RetrieveUsers().ToList<User>();
             return View(users);
             
         }
@@ -142,10 +150,12 @@ namespace ProjectManagementApplication.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    ServiceRepository.AddService(service);
+                    int userId = int.Parse(HttpContext.Request.Cookies["user"]!.Split(",")[0]);
+                    ServiceRepository repo = new(HttpContext, userId);
+                    repo.AddService(service);
                     successmsg = "Service added successfully";
                     ViewBag.success = successmsg;
-                    return View("AdminDashboard");
+                    return View("Index");
                 }
             }
             catch (DataException)

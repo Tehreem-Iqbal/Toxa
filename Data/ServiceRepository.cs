@@ -9,24 +9,30 @@ namespace ProjectManagementApplication.Data
 {
     public class ServiceRepository
     {
-        private static Dbcontext db = new Dbcontext();
-        public static void AddService(Service s)
+        private readonly Dbcontext db;
+        public ServiceRepository(HttpContext _httpcontext, int userId)
+        {
+            db = new Dbcontext();
+
+            db.userId = userId;
+        }
+        public void AddService(Service s)
         {
             db.Service.Add(s);
 
             db.SaveChanges();
         }
-        public static void AddPurchasedService(PurchasedServices service)
+        public void AddPurchasedService(PurchasedServices service)
         {
             db.PurchasedServices.Add(service);
 
             db.SaveChanges();
         }
-        public static Service? RetrieveService(int id)
+        public Service? RetrieveService(int id)
         {
             return db.Service.Find(id);
         }
-        public static void RemoveService(Service s)
+        public void RemoveService(Service s)
         {
             db.Service.Remove(s);
             db.SaveChanges();

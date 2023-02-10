@@ -1,323 +1,355 @@
 {
   "Files": [
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\ProjectManagementApplication.bundle.scp.css",
-      "PackagePath": "staticwebassets\\ProjectManagementApplication.bundle.scp.css"
+      "Id": "/Users/ali/Toxa/obj/Debug/net6.0/scopedcss/projectbundle/ProjectManagementApplication.bundle.scp.css",
+      "PackagePath": "staticwebassets/ProjectManagementApplication.bundle.scp.css"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\css\\custom.css",
-      "PackagePath": "staticwebassets\\css\\custom.css"
+      "Id": "/Users/ali/Toxa/wwwroot/Uploads/Users/Faran/me_white.png/me_white.png",
+      "PackagePath": "staticwebassets/Uploads/Users/Faran/me_white.png/me_white.png"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\css\\site.css",
-      "PackagePath": "staticwebassets\\css\\site.css"
+      "Id": "/Users/ali/Toxa/wwwroot/Uploads/Users/Tehreem/me_white.png/me_white.png",
+      "PackagePath": "staticwebassets/Uploads/Users/Tehreem/me_white.png/me_white.png"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\favicon.ico",
-      "PackagePath": "staticwebassets\\favicon.ico"
+      "Id": "/Users/ali/Toxa/wwwroot/Uploads/Users/ali/IMG_1802.jpg",
+      "PackagePath": "staticwebassets/Uploads/Users/ali/IMG_1802.jpg"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\js\\bootstrap.bundle.js",
-      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.js"
+      "Id": "/Users/ali/Toxa/wwwroot/Uploads/Users/ali/me_white.png/me_white.png",
+      "PackagePath": "staticwebassets/Uploads/Users/ali/me_white.png/me_white.png"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\js\\bootstrap.bundle.js.map",
-      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.js.map"
+      "Id": "/Users/ali/Toxa/wwwroot/Uploads/Users/hassanDSC_0362.jpg/DSC_0362.jpg",
+      "PackagePath": "staticwebassets/Uploads/Users/hassanDSC_0362.jpg/DSC_0362.jpg"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\js\\bootstrap.bundle.min.js",
-      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.min.js"
+      "Id": "/Users/ali/Toxa/wwwroot/Uploads/Users/iam/white-bg-logo.jpg/white-bg-logo.jpg",
+      "PackagePath": "staticwebassets/Uploads/Users/iam/white-bg-logo.jpg/white-bg-logo.jpg"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\js\\bootstrap.bundle.min.js.map",
-      "PackagePath": "staticwebassets\\js\\bootstrap.bundle.min.js.map"
+      "Id": "/Users/ali/Toxa/wwwroot/Uploads/Users/raza/47E75CF5-BB11-41C0-8CEC-D91F9C2FCE6F.JPEG",
+      "PackagePath": "staticwebassets/Uploads/Users/raza/47E75CF5-BB11-41C0-8CEC-D91F9C2FCE6F.JPEG"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\js\\bootstrap.esm.js",
-      "PackagePath": "staticwebassets\\js\\bootstrap.esm.js"
+      "Id": "/Users/ali/Toxa/wwwroot/Uploads/Users/th/kaliLinux.png/kaliLinux.png",
+      "PackagePath": "staticwebassets/Uploads/Users/th/kaliLinux.png/kaliLinux.png"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\js\\bootstrap.esm.js.map",
-      "PackagePath": "staticwebassets\\js\\bootstrap.esm.js.map"
+      "Id": "/Users/ali/Toxa/wwwroot/css/custom.css",
+      "PackagePath": "staticwebassets/css/custom.css"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\js\\bootstrap.esm.min.js",
-      "PackagePath": "staticwebassets\\js\\bootstrap.esm.min.js"
+      "Id": "/Users/ali/Toxa/wwwroot/css/site.css",
+      "PackagePath": "staticwebassets/css/site.css"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\js\\bootstrap.esm.min.js.map",
-      "PackagePath": "staticwebassets\\js\\bootstrap.esm.min.js.map"
+      "Id": "/Users/ali/Toxa/wwwroot/favicon.ico",
+      "PackagePath": "staticwebassets/favicon.ico"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\js\\bootstrap.js",
-      "PackagePath": "staticwebassets\\js\\bootstrap.js"
+      "Id": "/Users/ali/Toxa/wwwroot/js/bootstrap.bundle.js",
+      "PackagePath": "staticwebassets/js/bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\js\\bootstrap.js.map",
-      "PackagePath": "staticwebassets\\js\\bootstrap.js.map"
+      "Id": "/Users/ali/Toxa/wwwroot/js/bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets/js/bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\js\\bootstrap.min.js",
-      "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
+      "Id": "/Users/ali/Toxa/wwwroot/js/bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets/js/bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\js\\bootstrap.min.js.map",
-      "PackagePath": "staticwebassets\\js\\bootstrap.min.js.map"
+      "Id": "/Users/ali/Toxa/wwwroot/js/bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets/js/bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\js\\custom.js",
-      "PackagePath": "staticwebassets\\js\\custom.js"
+      "Id": "/Users/ali/Toxa/wwwroot/js/bootstrap.esm.js",
+      "PackagePath": "staticwebassets/js/bootstrap.esm.js"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\js\\site.js",
-      "PackagePath": "staticwebassets\\js\\site.js"
+      "Id": "/Users/ali/Toxa/wwwroot/js/bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets/js/bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\LICENSE",
-      "PackagePath": "staticwebassets\\lib\\bootstrap"
+      "Id": "/Users/ali/Toxa/wwwroot/js/bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets/js/bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+      "Id": "/Users/ali/Toxa/wwwroot/js/bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets/js/bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+      "Id": "/Users/ali/Toxa/wwwroot/js/bootstrap.js",
+      "PackagePath": "staticwebassets/js/bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+      "Id": "/Users/ali/Toxa/wwwroot/js/bootstrap.js.map",
+      "PackagePath": "staticwebassets/js/bootstrap.js.map"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+      "Id": "/Users/ali/Toxa/wwwroot/js/bootstrap.min.js",
+      "PackagePath": "staticwebassets/js/bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+      "Id": "/Users/ali/Toxa/wwwroot/js/bootstrap.min.js.map",
+      "PackagePath": "staticwebassets/js/bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+      "Id": "/Users/ali/Toxa/wwwroot/js/custom.js",
+      "PackagePath": "staticwebassets/js/custom.js"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+      "Id": "/Users/ali/Toxa/wwwroot/js/site.js",
+      "PackagePath": "staticwebassets/js/site.js"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/LICENSE",
+      "PackagePath": "staticwebassets/lib/bootstrap"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css.map"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css.map"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css.map"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css.map"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\dist\\css\\custom.css",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\custom.css"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css.map"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css.map"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css.map"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/dist/css/custom.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/custom.css"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js.map"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
-      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js.map"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js.map"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js.map"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
-      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js.map"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\jquery\\LICENSE.txt",
-      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/LICENSE.txt"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\jquery\\dist\\jquery.js",
-      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
-      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
     },
     {
-      "Id": "C:\\Users\\tehre\\Desktop\\repos\\Toxa\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
-      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+      "Id": "/Users/ali/Toxa/wwwroot/lib/jquery-validation/LICENSE.md",
+      "PackagePath": "staticwebassets/lib/jquery-validation/LICENSE.md"
     },
     {
-      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.ProjectManagementApplication.Microsoft.AspNetCore.StaticWebAssets.props",
+      "Id": "/Users/ali/Toxa/wwwroot/lib/jquery-validation/dist/additional-methods.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.js"
+    },
+    {
+      "Id": "/Users/ali/Toxa/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.min.js"
+    },
+    {
+      "Id": "/Users/ali/Toxa/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.js"
+    },
+    {
+      "Id": "/Users/ali/Toxa/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.min.js"
+    },
+    {
+      "Id": "/Users/ali/Toxa/wwwroot/lib/jquery/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery/LICENSE.txt"
+    },
+    {
+      "Id": "/Users/ali/Toxa/wwwroot/lib/jquery/dist/jquery.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.js"
+    },
+    {
+      "Id": "/Users/ali/Toxa/wwwroot/lib/jquery/dist/jquery.min.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.js"
+    },
+    {
+      "Id": "/Users/ali/Toxa/wwwroot/lib/jquery/dist/jquery.min.map",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
+    },
+    {
+      "Id": "obj/Debug/net6.0/staticwebassets/msbuild.ProjectManagementApplication.Microsoft.AspNetCore.StaticWebAssets.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
     },
     {
-      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.build.ProjectManagementApplication.props",
+      "Id": "obj/Debug/net6.0/staticwebassets/msbuild.build.ProjectManagementApplication.props",
       "PackagePath": "build\\ProjectManagementApplication.props"
     },
     {
-      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildMultiTargeting.ProjectManagementApplication.props",
+      "Id": "obj/Debug/net6.0/staticwebassets/msbuild.buildMultiTargeting.ProjectManagementApplication.props",
       "PackagePath": "buildMultiTargeting\\ProjectManagementApplication.props"
     },
     {
-      "Id": "obj\\Debug\\net6.0\\staticwebassets\\msbuild.buildTransitive.ProjectManagementApplication.props",
+      "Id": "obj/Debug/net6.0/staticwebassets/msbuild.buildTransitive.ProjectManagementApplication.props",
       "PackagePath": "buildTransitive\\ProjectManagementApplication.props"
     }
   ],

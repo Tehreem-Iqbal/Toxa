@@ -5,11 +5,9 @@ using System.Numerics;
 namespace ProjectManagementApplication.Models
 {
     [Serializable]
-    public class User
-    {
+    public class User : FullAuditModel
+    { 
      
-        [Key]
-        public int UserId { get; set; }
         public bool UserType { get; set; } 
 
         [Required(ErrorMessage = "This field is required")]

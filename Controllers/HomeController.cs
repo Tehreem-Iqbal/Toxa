@@ -10,7 +10,6 @@ namespace ProjectManagementApplication.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-        Dbcontext db = new Dbcontext();
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
@@ -21,11 +20,12 @@ namespace ProjectManagementApplication.Controllers
             return View();
         }
 
-        public IActionResult Services()
-        {
-            List<Service> ServiceList = db.Service.ToList();
-            return View(ServiceList);
-        }
+        //public IActionResult Services()
+        //{
+        //    ServiceRepository repo = new(HttpContext, 0);
+        //    List<Service> ServiceList = repo.RetrieveServices().ToList();
+        //    return View(ServiceList);
+        //}
 
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()

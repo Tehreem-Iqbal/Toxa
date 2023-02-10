@@ -3509,26 +3509,25 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ali Raza\\.nuget\\packages\\": {}
+    "/Users/ali/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Ali Raza\\Documents\\ead-proj\\version2.0\\Toxa\\ProjectManagementApplication.csproj",
+      "projectUniqueName": "/Users/ali/Toxa/ProjectManagementApplication.csproj",
       "projectName": "ProjectManagementApplication",
-      "projectPath": "C:\\Users\\Ali Raza\\Documents\\ead-proj\\version2.0\\Toxa\\ProjectManagementApplication.csproj",
-      "packagesPath": "C:\\Users\\Ali Raza\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Ali Raza\\Documents\\ead-proj\\version2.0\\Toxa\\obj\\",
+      "projectPath": "/Users/ali/Toxa/ProjectManagementApplication.csproj",
+      "packagesPath": "/Users/ali/.nuget/packages/",
+      "outputPath": "/Users/ali/Toxa/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Ali Raza\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        "/Users/ali/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "/usr/local/share/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -3577,7 +3576,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.403\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.101/RuntimeIdentifierGraph.json"
       }
     }
   }

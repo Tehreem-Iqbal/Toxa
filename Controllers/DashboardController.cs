@@ -24,8 +24,10 @@ namespace ProjectManagementApplication.Controllers
             }
 
             //User user = JsonSerializer.Deserialize<User>(HttpContext.Session.GetString("user")!)!;
-            User user = JsonSerializer.Deserialize<User>((string)TempData["user"])!;
-            List<Project> projects = ProjectRepository.RetrieveUserProjects(user);
+            User user = JsonSerializer.Deserialize<User>((string)TempData["user"]!)!;
+            int userId = int.Parse(HttpContext.Request.Cookies["user"]!.Split(",")[0]);
+            ProjectRepository repo = new(HttpContext,userId);
+            List<Project> projects = repo.RetrieveUserProjects(user);
             Tuple<User, List<Project>> tuple = new Tuple<User, List<Project>>(user, projects);
             Console.WriteLine(tuple.Item1.UserName);
             return View(tuple);
@@ -49,8 +51,10 @@ namespace ProjectManagementApplication.Controllers
                 service.Description = s.Description;
                 service.Charges = s.Charges;
                 service.Status = true;
-                service.CustomerId = int.Parse(HttpContext.Request.Cookies["user"].Split(",")[0]);
-                ServiceRepository.AddPurchasedService(service);
+                service.CustomerId = int.Parse(HttpContext.Request.Cookies["user"]!.Split(",")[0]);
+                int userId = int.Parse(HttpContext.Request.Cookies["user"]!.Split(",")[0]);
+                ServiceRepository repo = new(HttpContext, userId);
+                repo.AddPurchasedService(service);
                 return View("Services");
             }
             catch (DataException)

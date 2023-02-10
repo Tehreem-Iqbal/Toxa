@@ -2,10 +2,8 @@
 
 namespace ProjectManagementApplication.Models
 {
-    public class Service
+    public class Service : FullAuditModel
     {
-        [Key]
-        public int ServiceId { get; set; }
         [Required]
         public string? Name { get; set; }
         [Required]

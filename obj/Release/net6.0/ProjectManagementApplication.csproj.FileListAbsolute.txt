@@ -1,90 +1,177 @@
-C:\Users\tehre\Desktop\repos\Toxa\obj\Release\net6.0\ProjectManagementApplication.csproj.AssemblyReference.cache
-C:\Users\tehre\Desktop\repos\Toxa\obj\Release\net6.0\ProjectManagementApplication.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\tehre\Desktop\repos\Toxa\obj\Release\net6.0\ProjectManagementApplication.AssemblyInfoInputs.cache
-C:\Users\tehre\Desktop\repos\Toxa\obj\Release\net6.0\ProjectManagementApplication.AssemblyInfo.cs
-C:\Users\tehre\Desktop\repos\Toxa\obj\Release\net6.0\ProjectManagementApplication.csproj.CoreCompileInputs.cache
-C:\Users\tehre\Desktop\repos\Toxa\obj\Release\net6.0\ProjectManagementApplication.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\tehre\Desktop\repos\Toxa\obj\Release\net6.0\ProjectManagementApplication.RazorAssemblyInfo.cache
-C:\Users\tehre\Desktop\repos\Toxa\obj\Release\net6.0\ProjectManagementApplication.RazorAssemblyInfo.cs
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\appsettings.Development.json
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\appsettings.json
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\ProjectManagementApplication.staticwebassets.runtime.json
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\ProjectManagementApplication.exe
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\ProjectManagementApplication.deps.json
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\ProjectManagementApplication.runtimeconfig.json
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\ProjectManagementApplication.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\ProjectManagementApplication.pdb
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\Azure.Core.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\Azure.Identity.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\Humanizer.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\Microsoft.Data.SqlClient.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\Microsoft.EntityFrameworkCore.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Abstractions.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Design.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\Microsoft.EntityFrameworkCore.SqlServer.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\Microsoft.Extensions.Caching.Abstractions.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\Microsoft.Extensions.Caching.Memory.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\Microsoft.Extensions.Configuration.Abstractions.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\Microsoft.Extensions.DependencyInjection.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\Microsoft.Extensions.DependencyModel.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\Microsoft.Extensions.Logging.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\Microsoft.Extensions.Logging.Abstractions.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\Microsoft.Extensions.Options.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\Microsoft.Extensions.Primitives.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\Microsoft.Identity.Client.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\Microsoft.Identity.Client.Extensions.Msal.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\Microsoft.IdentityModel.Abstractions.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\Microsoft.IdentityModel.JsonWebTokens.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\Microsoft.IdentityModel.Logging.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\Microsoft.IdentityModel.Tokens.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\Microsoft.SqlServer.Server.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\Microsoft.Win32.SystemEvents.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\Mono.TextTemplating.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\System.CodeDom.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\System.Configuration.ConfigurationManager.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\System.Drawing.Common.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\System.IdentityModel.Tokens.Jwt.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\System.Memory.Data.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\System.Runtime.Caching.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\System.Security.Permissions.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\System.Text.Encodings.Web.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\System.Text.Json.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\System.Windows.Extensions.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\runtimes\unix\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\runtimes\win\lib\netcoreapp3.1\Microsoft.Data.SqlClient.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\runtimes\win-arm\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\runtimes\win-arm64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\runtimes\win-x64\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\runtimes\win-x86\native\Microsoft.Data.SqlClient.SNI.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\runtimes\win\lib\netcoreapp3.0\Microsoft.Win32.SystemEvents.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\runtimes\unix\lib\netcoreapp3.0\System.Drawing.Common.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\runtimes\win\lib\netcoreapp3.0\System.Drawing.Common.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\runtimes\win\lib\netstandard2.0\System.Runtime.Caching.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\bin\Release\net6.0\runtimes\win\lib\netcoreapp3.0\System.Windows.Extensions.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\obj\Release\net6.0\ProjectManagementApplication.csproj.AssemblyReference.cache
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\obj\Release\net6.0\ProjectManagementApplication.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\obj\Release\net6.0\ProjectManagementApplication.AssemblyInfoInputs.cache
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\obj\Release\net6.0\ProjectManagementApplication.AssemblyInfo.cs
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\obj\Release\net6.0\ProjectManagementApplication.csproj.CoreCompileInputs.cache
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\obj\Release\net6.0\ProjectManagementApplication.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\obj\Release\net6.0\ProjectManagementApplication.RazorAssemblyInfo.cache
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\obj\Release\net6.0\ProjectManagementApplication.RazorAssemblyInfo.cs
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\obj\Release\net6.0\staticwebassets.build.json
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\obj\Release\net6.0\staticwebassets.development.json
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\obj\Release\net6.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\obj\Release\net6.0\scopedcss\bundle\ProjectManagementApplication.styles.css
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\obj\Release\net6.0\scopedcss\projectbundle\ProjectManagementApplication.bundle.scp.css
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\obj\Release\net6.0\ProjectManagementApplication.csproj.CopyComplete
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\obj\Release\net6.0\ProjectManagementApplication.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\obj\Release\net6.0\refint\ProjectManagementApplication.dll
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\obj\Release\net6.0\ProjectManagementApplication.pdb
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\obj\Release\net6.0\ProjectManagementApplication.genruntimeconfig.cache
-C:\Users\Ali Raza\Documents\ead-proj\version2.0\Toxa\obj\Release\net6.0\ref\ProjectManagementApplication.dll
+C:/Users/tehre/Desktop/repos/Toxa/obj/Release/net6.0/ProjectManagementApplication.csproj.AssemblyReference.cache
+C:/Users/tehre/Desktop/repos/Toxa/obj/Release/net6.0/ProjectManagementApplication.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/tehre/Desktop/repos/Toxa/obj/Release/net6.0/ProjectManagementApplication.AssemblyInfoInputs.cache
+C:/Users/tehre/Desktop/repos/Toxa/obj/Release/net6.0/ProjectManagementApplication.AssemblyInfo.cs
+C:/Users/tehre/Desktop/repos/Toxa/obj/Release/net6.0/ProjectManagementApplication.csproj.CoreCompileInputs.cache
+C:/Users/tehre/Desktop/repos/Toxa/obj/Release/net6.0/ProjectManagementApplication.MvcApplicationPartsAssemblyInfo.cache
+C:/Users/tehre/Desktop/repos/Toxa/obj/Release/net6.0/ProjectManagementApplication.RazorAssemblyInfo.cache
+C:/Users/tehre/Desktop/repos/Toxa/obj/Release/net6.0/ProjectManagementApplication.RazorAssemblyInfo.cs
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/appsettings.Development.json
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/appsettings.json
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/ProjectManagementApplication.staticwebassets.runtime.json
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/ProjectManagementApplication.exe
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/ProjectManagementApplication.deps.json
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/ProjectManagementApplication.runtimeconfig.json
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/ProjectManagementApplication.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/ProjectManagementApplication.pdb
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/Azure.Core.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/Azure.Identity.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/Humanizer.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/Microsoft.Bcl.AsyncInterfaces.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/Microsoft.Data.SqlClient.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/Microsoft.EntityFrameworkCore.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/Microsoft.EntityFrameworkCore.Design.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/Microsoft.EntityFrameworkCore.Relational.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/Microsoft.EntityFrameworkCore.SqlServer.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/Microsoft.Extensions.Caching.Abstractions.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/Microsoft.Extensions.Caching.Memory.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/Microsoft.Extensions.Configuration.Abstractions.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/Microsoft.Extensions.DependencyInjection.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/Microsoft.Extensions.DependencyModel.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/Microsoft.Extensions.Logging.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/Microsoft.Extensions.Logging.Abstractions.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/Microsoft.Extensions.Options.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/Microsoft.Extensions.Primitives.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/Microsoft.Identity.Client.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/Microsoft.Identity.Client.Extensions.Msal.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/Microsoft.IdentityModel.Abstractions.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/Microsoft.IdentityModel.JsonWebTokens.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/Microsoft.IdentityModel.Logging.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/Microsoft.IdentityModel.Protocols.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/Microsoft.IdentityModel.Tokens.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/Microsoft.SqlServer.Server.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/Microsoft.Win32.SystemEvents.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/Mono.TextTemplating.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/System.CodeDom.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/System.Configuration.ConfigurationManager.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/System.Drawing.Common.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/System.IdentityModel.Tokens.Jwt.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/System.Memory.Data.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/System.Runtime.Caching.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/System.Security.Cryptography.ProtectedData.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/System.Security.Permissions.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/System.Text.Encodings.Web.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/System.Text.Json.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/System.Windows.Extensions.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/runtimes/unix/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/runtimes/win/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/runtimes/win/lib/netstandard2.0/System.Runtime.Caching.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/runtimes/browser/lib/net6.0/System.Text.Encodings.Web.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/bin/Release/net6.0/runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/obj/Release/net6.0/ProjectManagementApplication.csproj.AssemblyReference.cache
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/obj/Release/net6.0/ProjectManagementApplication.GeneratedMSBuildEditorConfig.editorconfig
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/obj/Release/net6.0/ProjectManagementApplication.AssemblyInfoInputs.cache
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/obj/Release/net6.0/ProjectManagementApplication.AssemblyInfo.cs
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/obj/Release/net6.0/ProjectManagementApplication.csproj.CoreCompileInputs.cache
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/obj/Release/net6.0/ProjectManagementApplication.MvcApplicationPartsAssemblyInfo.cache
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/obj/Release/net6.0/ProjectManagementApplication.RazorAssemblyInfo.cache
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/obj/Release/net6.0/ProjectManagementApplication.RazorAssemblyInfo.cs
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/obj/Release/net6.0/staticwebassets.build.json
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/obj/Release/net6.0/staticwebassets.development.json
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/obj/Release/net6.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/obj/Release/net6.0/scopedcss/bundle/ProjectManagementApplication.styles.css
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/obj/Release/net6.0/scopedcss/projectbundle/ProjectManagementApplication.bundle.scp.css
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/obj/Release/net6.0/ProjectManagementApplication.csproj.CopyComplete
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/obj/Release/net6.0/ProjectManagementApplication.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/obj/Release/net6.0/refint/ProjectManagementApplication.dll
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/obj/Release/net6.0/ProjectManagementApplication.pdb
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/obj/Release/net6.0/ProjectManagementApplication.genruntimeconfig.cache
+C:/Users/Ali Raza/Documents/ead-proj/version2.0/Toxa/obj/Release/net6.0/ref/ProjectManagementApplication.dll
+/Users/ali/Toxa/bin/Release/net6.0/appsettings.Development.json
+/Users/ali/Toxa/bin/Release/net6.0/appsettings.json
+/Users/ali/Toxa/bin/Release/net6.0/ProjectManagementApplication.staticwebassets.runtime.json
+/Users/ali/Toxa/bin/Release/net6.0/ProjectManagementApplication
+/Users/ali/Toxa/bin/Release/net6.0/ProjectManagementApplication.deps.json
+/Users/ali/Toxa/bin/Release/net6.0/ProjectManagementApplication.runtimeconfig.json
+/Users/ali/Toxa/bin/Release/net6.0/ProjectManagementApplication.dll
+/Users/ali/Toxa/bin/Release/net6.0/ProjectManagementApplication.pdb
+/Users/ali/Toxa/bin/Release/net6.0/Azure.Core.dll
+/Users/ali/Toxa/bin/Release/net6.0/Azure.Identity.dll
+/Users/ali/Toxa/bin/Release/net6.0/Humanizer.dll
+/Users/ali/Toxa/bin/Release/net6.0/Microsoft.Bcl.AsyncInterfaces.dll
+/Users/ali/Toxa/bin/Release/net6.0/Microsoft.Data.SqlClient.dll
+/Users/ali/Toxa/bin/Release/net6.0/Microsoft.EntityFrameworkCore.dll
+/Users/ali/Toxa/bin/Release/net6.0/Microsoft.EntityFrameworkCore.Abstractions.dll
+/Users/ali/Toxa/bin/Release/net6.0/Microsoft.EntityFrameworkCore.Design.dll
+/Users/ali/Toxa/bin/Release/net6.0/Microsoft.EntityFrameworkCore.Relational.dll
+/Users/ali/Toxa/bin/Release/net6.0/Microsoft.EntityFrameworkCore.SqlServer.dll
+/Users/ali/Toxa/bin/Release/net6.0/Microsoft.Extensions.Caching.Abstractions.dll
+/Users/ali/Toxa/bin/Release/net6.0/Microsoft.Extensions.Caching.Memory.dll
+/Users/ali/Toxa/bin/Release/net6.0/Microsoft.Extensions.Configuration.Abstractions.dll
+/Users/ali/Toxa/bin/Release/net6.0/Microsoft.Extensions.DependencyInjection.dll
+/Users/ali/Toxa/bin/Release/net6.0/Microsoft.Extensions.DependencyInjection.Abstractions.dll
+/Users/ali/Toxa/bin/Release/net6.0/Microsoft.Extensions.DependencyModel.dll
+/Users/ali/Toxa/bin/Release/net6.0/Microsoft.Extensions.Logging.dll
+/Users/ali/Toxa/bin/Release/net6.0/Microsoft.Extensions.Logging.Abstractions.dll
+/Users/ali/Toxa/bin/Release/net6.0/Microsoft.Extensions.Options.dll
+/Users/ali/Toxa/bin/Release/net6.0/Microsoft.Extensions.Primitives.dll
+/Users/ali/Toxa/bin/Release/net6.0/Microsoft.Identity.Client.dll
+/Users/ali/Toxa/bin/Release/net6.0/Microsoft.Identity.Client.Extensions.Msal.dll
+/Users/ali/Toxa/bin/Release/net6.0/Microsoft.IdentityModel.Abstractions.dll
+/Users/ali/Toxa/bin/Release/net6.0/Microsoft.IdentityModel.JsonWebTokens.dll
+/Users/ali/Toxa/bin/Release/net6.0/Microsoft.IdentityModel.Logging.dll
+/Users/ali/Toxa/bin/Release/net6.0/Microsoft.IdentityModel.Protocols.dll
+/Users/ali/Toxa/bin/Release/net6.0/Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+/Users/ali/Toxa/bin/Release/net6.0/Microsoft.IdentityModel.Tokens.dll
+/Users/ali/Toxa/bin/Release/net6.0/Microsoft.SqlServer.Server.dll
+/Users/ali/Toxa/bin/Release/net6.0/Microsoft.Win32.SystemEvents.dll
+/Users/ali/Toxa/bin/Release/net6.0/Mono.TextTemplating.dll
+/Users/ali/Toxa/bin/Release/net6.0/System.CodeDom.dll
+/Users/ali/Toxa/bin/Release/net6.0/System.Configuration.ConfigurationManager.dll
+/Users/ali/Toxa/bin/Release/net6.0/System.Drawing.Common.dll
+/Users/ali/Toxa/bin/Release/net6.0/System.IdentityModel.Tokens.Jwt.dll
+/Users/ali/Toxa/bin/Release/net6.0/System.Memory.Data.dll
+/Users/ali/Toxa/bin/Release/net6.0/System.Runtime.Caching.dll
+/Users/ali/Toxa/bin/Release/net6.0/System.Security.Cryptography.ProtectedData.dll
+/Users/ali/Toxa/bin/Release/net6.0/System.Security.Permissions.dll
+/Users/ali/Toxa/bin/Release/net6.0/System.Text.Encodings.Web.dll
+/Users/ali/Toxa/bin/Release/net6.0/System.Text.Json.dll
+/Users/ali/Toxa/bin/Release/net6.0/System.Windows.Extensions.dll
+/Users/ali/Toxa/bin/Release/net6.0/runtimes/unix/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll
+/Users/ali/Toxa/bin/Release/net6.0/runtimes/win/lib/netcoreapp3.1/Microsoft.Data.SqlClient.dll
+/Users/ali/Toxa/bin/Release/net6.0/runtimes/win-arm/native/Microsoft.Data.SqlClient.SNI.dll
+/Users/ali/Toxa/bin/Release/net6.0/runtimes/win-arm64/native/Microsoft.Data.SqlClient.SNI.dll
+/Users/ali/Toxa/bin/Release/net6.0/runtimes/win-x64/native/Microsoft.Data.SqlClient.SNI.dll
+/Users/ali/Toxa/bin/Release/net6.0/runtimes/win-x86/native/Microsoft.Data.SqlClient.SNI.dll
+/Users/ali/Toxa/bin/Release/net6.0/runtimes/win/lib/netcoreapp3.0/Microsoft.Win32.SystemEvents.dll
+/Users/ali/Toxa/bin/Release/net6.0/runtimes/unix/lib/netcoreapp3.0/System.Drawing.Common.dll
+/Users/ali/Toxa/bin/Release/net6.0/runtimes/win/lib/netcoreapp3.0/System.Drawing.Common.dll
+/Users/ali/Toxa/bin/Release/net6.0/runtimes/win/lib/netstandard2.0/System.Runtime.Caching.dll
+/Users/ali/Toxa/bin/Release/net6.0/runtimes/win/lib/netstandard2.0/System.Security.Cryptography.ProtectedData.dll
+/Users/ali/Toxa/bin/Release/net6.0/runtimes/browser/lib/net6.0/System.Text.Encodings.Web.dll
+/Users/ali/Toxa/bin/Release/net6.0/runtimes/win/lib/netcoreapp3.0/System.Windows.Extensions.dll
+/Users/ali/Toxa/obj/Release/net6.0/ProjectManagementApplication.csproj.AssemblyReference.cache
+/Users/ali/Toxa/obj/Release/net6.0/ProjectManagementApplication.GeneratedMSBuildEditorConfig.editorconfig
+/Users/ali/Toxa/obj/Release/net6.0/ProjectManagementApplication.AssemblyInfoInputs.cache
+/Users/ali/Toxa/obj/Release/net6.0/ProjectManagementApplication.AssemblyInfo.cs
+/Users/ali/Toxa/obj/Release/net6.0/ProjectManagementApplication.csproj.CoreCompileInputs.cache
+/Users/ali/Toxa/obj/Release/net6.0/ProjectManagementApplication.MvcApplicationPartsAssemblyInfo.cache
+/Users/ali/Toxa/obj/Release/net6.0/ProjectManagementApplication.RazorAssemblyInfo.cache
+/Users/ali/Toxa/obj/Release/net6.0/ProjectManagementApplication.RazorAssemblyInfo.cs
+/Users/ali/Toxa/obj/Release/net6.0/staticwebassets/msbuild.ProjectManagementApplication.Microsoft.AspNetCore.StaticWebAssets.props
+/Users/ali/Toxa/obj/Release/net6.0/staticwebassets/msbuild.build.ProjectManagementApplication.props
+/Users/ali/Toxa/obj/Release/net6.0/staticwebassets/msbuild.buildMultiTargeting.ProjectManagementApplication.props
+/Users/ali/Toxa/obj/Release/net6.0/staticwebassets/msbuild.buildTransitive.ProjectManagementApplication.props
+/Users/ali/Toxa/obj/Release/net6.0/staticwebassets.pack.json
+/Users/ali/Toxa/obj/Release/net6.0/staticwebassets.build.json
+/Users/ali/Toxa/obj/Release/net6.0/staticwebassets.development.json
+/Users/ali/Toxa/obj/Release/net6.0/scopedcss/Views/Shared/_Layout.cshtml.rz.scp.css
+/Users/ali/Toxa/obj/Release/net6.0/scopedcss/bundle/ProjectManagementApplication.styles.css
+/Users/ali/Toxa/obj/Release/net6.0/scopedcss/projectbundle/ProjectManagementApplication.bundle.scp.css
+/Users/ali/Toxa/obj/Release/net6.0/ProjectManagementApplication.csproj.CopyComplete
+/Users/ali/Toxa/obj/Release/net6.0/ProjectManagementApplication.dll
+/Users/ali/Toxa/obj/Release/net6.0/refint/ProjectManagementApplication.dll
+/Users/ali/Toxa/obj/Release/net6.0/ProjectManagementApplication.pdb
+/Users/ali/Toxa/obj/Release/net6.0/ProjectManagementApplication.genruntimeconfig.cache
+/Users/ali/Toxa/obj/Release/net6.0/ref/ProjectManagementApplication.dll

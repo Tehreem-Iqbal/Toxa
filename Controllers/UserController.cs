@@ -29,18 +29,20 @@ namespace ProjectManagementApplication.Controllers
             {
                 if (ModelState.IsValid)
                 {
+                    AddCookie(user);
                     user.UserType = false;
-
-                    string path = "";
                     string wwwPath = this.Environment.WebRootPath;
                     string userdir = "Uploads/Users/" + user.UserName;
                     userdir = Path.GetFullPath(Path.Combine(wwwPath, userdir));
-                    user.ImageURL = userdir + "/" + user.Image.FileName;
+                    user.ImageURL = userdir + "/" + user.Image!.FileName;
 
+
+                    int userId = int.Parse(HttpContext.Request.Cookies["user"]!.Split(",")[0]);
+                    UserRepository repo = new(HttpContext,userId);
+                    Console.WriteLine("Okkkk");
+                    ViewBag.msg = repo.AddUser(user);
                     
 
-
-                    ViewBag.msg = UserRepository.AddUser(user);
                     return View("Login");              
                 }
             }
@@ -62,13 +64,15 @@ namespace ProjectManagementApplication.Controllers
             try
             {
                 object errormsg;
-                IEnumerable<User> UsersList = UserRepository.RetrieveUsers();
+                int userId = int.Parse(HttpContext.Request.Cookies["user"]!.Split(",")[0]);
+                UserRepository repo = new(HttpContext,userId);
+                IEnumerable<User> UsersList = repo.RetrieveUsers();
                
                 foreach (User _user in UsersList)
                 {
-                    if (_user.UserEmail.Equals(user.UserEmail))
+                    if (_user.UserEmail!.Equals(user.UserEmail))
                     {
-                        if (_user.Password.Equals(user.Password))
+                        if (_user.Password!.Equals(user.Password))
                         {
                             AddCookie(_user);
                             //HttpContext.Session.SetString("user", JsonSerializer.Serialize(_user));
@@ -92,7 +96,7 @@ namespace ProjectManagementApplication.Controllers
             CookieOptions options = new CookieOptions();
             options.Expires = DateTime.Now.AddMinutes(30);
 
-            Response.Cookies.Append("user", user.UserId.ToString()+","+user.UserType.ToString());
+            Response.Cookies.Append("user", user.Id.ToString()+","+user.UserType.ToString());
             // Response.Cookies.Append("usertype", user.UserType.ToString());
         }
 
