@@ -1,0 +1,91 @@
+﻿@model Tuple<User, List<Invoice>, Tuple<int, int, int>>;
+@{
+
+    ViewBag.Title = "Admin Dashboard";
+    Layout = "~/Views/Shared/_LayoutAdminDashboard.cshtml";
+}
+
+@section userinfo {
+    <div class="dropdown">
+        <img src="~/@Model.Item1.ImageURL" alt="profile" class="rounded-circle" width="50" height="50">
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item" asp-controller="User" asp-action="Profile">Profile</a></li>
+            <li><a class="dropdown-item" asp-controller="User" asp-action="Logout">Logout</a></li>
+        </ul>
+    </div>
+}
+
+<!-- Destaials Section -->
+<div class="col-md-10">
+    <h1>Admin Dashboard</h1>
+
+    <div class="row row-cols-3 row-cols-md-1 mb-3 row-cols-sm-1">
+        <div class="card me-auto text-white bg-primary p-3" style="max-width: 20rem;">
+            <div class="card-header">Projects</div>
+            <div class="card-body row">
+                <h1 class="card-title col d-flex justify-content-center">@Model.Item3.Item1</h1>
+                <div class="col d-flex justify-content-center">
+                    <img src="~/Images/project-logo.png" alt="projects" class="rounded-circle" width="70" height="70">
+                </div>
+            </div>
+        </div>
+        <div class="card  me-auto text-white bg-primary p-3" style="max-width: 20rem;">
+            <div class="card-header">Services</div>
+            <div class="card-body row">
+                <h1 class="card-title col d-flex justify-content-center">@Model.Item3.Item2</h1>
+                <div class="col d-flex justify-content-center">
+                    <img src="~/Images/service-logo.png" alt="services" class="rounded-circle" width="70" height="70">
+                </div>
+            </div>
+        </div>
+        <div class="card text-white bg-primary p-3" style="max-width: 20rem;">
+            <div class="card-header">Users</div>
+            <div class="card-body row">
+                <h1 class="card-title col d-flex justify-content-center">@Model.Item3.Item3</h1>
+                <div class="col d-flex justify-content-center">
+                    <img src="~/Images/users-logo.png" alt="users" class="rounded-circle" width="70" height="70">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row row-cols-1 row-cols-md-1">
+        <div class="card text-center">
+            <div class="card-body">
+                <h5 class="card-title">Pending Payments</h5>
+                <div class="overflow-scroll" style="height: 400px; overflow-y: scroll;">
+                    @if (Model.Item2.Count() <= 0)
+                        {
+                        <strong>No pending Payments</strong>
+                        }
+                    else
+                    {
+                        <table class="table table-striped table-responsive">
+                            <thead class="bg-primary text-white" style="position: sticky; top: 0;">
+                                <tr>
+                                    <th scope="col">Sr. #</th>
+                                    <th scope="col">User ID</th>
+                                    <th scope="col">Amount</th>
+                                    <th scope="col">Handle</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach (Invoice invoice in Model.Item2)
+                                {
+                                    <tr>
+                                        <th> scope="row">@invoice.Id</th>
+                                        <td>@invoice.CustomerId</td>
+                                        <td>@invoice.Bill</td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
+                    }
+                    </div>
+            </div>
+            <div class="card-footer text-muted">
+                @DateTime.Now
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Details Section ends here -->

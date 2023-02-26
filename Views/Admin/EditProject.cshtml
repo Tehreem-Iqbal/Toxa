@@ -1,20 +1,27 @@
-﻿@model Project;
+﻿@using ProjectManagementApplication.Models;
+@model Project;
 @{
     Layout = "_LayoutForm";
 }
 
-<form >
+<form method="post" action="EditProject" enctype="multipart/form-data">
     <fieldset>
-        <legend class="text-center">Add Project</legend>
+        <legend class="text-center">Edit Project</legend>
 
+        <div class="form-group">
+            <fieldset disabled="">
+                <label class="form-label" asp-for="@Model.Id"> Project ID </label>
+                <input asp-for="@Model.Id" type="text" class="form-control" value="@Model.Id" disabled="">
+            </fieldset>
+        </div>
 
         <div class="form-group">
 
             <label class="col-form-label mt-4" asp-for="Name">Project Name</label>
-            <input asp-for="Name" type="text" class="form-control" placeholder="Enter Project Name">
+            <input asp-for="Name" type="text" class="form-control" value="@Model.Name">
 
             <label class="col-form-label mt-4" asp-for="Description">Description</label>
-            <textarea class="form-control" rows="3" spellcheck="true" placeholder="Enter Project Description"></textarea>
+            <textarea class="form-control" rows="3" spellcheck="true" value="@Model.Description"></textarea>
 
             <label asp-for="Cost"> Project Cost </label>
             <input asp-for="Cost" type="number" class="form-control">
@@ -22,7 +29,7 @@
             <label  asp-for="Cost" class="col-form-label">Project Cost</label>
             <div class="input-group mb-3">
                 <span class="input-group-text">Rs.</span>
-                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="Enter Project Cost">
+                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" value="@Model.Cost">
                 <span class="input-group-text">.00</span>
             </div>
 

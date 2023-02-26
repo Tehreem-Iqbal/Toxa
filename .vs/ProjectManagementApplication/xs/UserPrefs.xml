@@ -1,11 +1,20 @@
 ﻿<Properties StartupConfiguration="{9E329ABF-7262-48C6-91B9-D41452EBA38F}|Default">
   <MonoDevelop.Ide.ItemProperties.ProjectManagementApplication PreferredExecutionTarget="/Applications/Google Chrome.app" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/AdminController.cs">
+    <Files>
+      <File FileName="Views/Admin/Index.cshtml" Line="44" Column="92" />
+      <File FileName="Data/ServiceRepository.cs" Line="39" Column="10" />
+      <File FileName="Data/ProjectRepository.cs" Line="63" Column="30" />
+      <File FileName="Data/UserRepository.cs" Line="108" Column="39" />
+      <File FileName="Controllers/AdminController.cs" Line="191" Column="26" />
+      <File FileName="Views/Admin/DisplayAllUsers.cshtml" Line="1" Column="31" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
@@ -14,20 +23,15 @@
               <Node name="Controllers" expanded="True" />
               <Node name="Data" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Admin" expanded="True" />
-                <Node name="Dashboard" expanded="True" />
-                <Node name="Home" expanded="True">
-                  <Node name="Index.cshtml" selected="True" />
+                <Node name="Admin" expanded="True">
+                  <Node name="DisplayAllUsers.cshtml" selected="True" />
                 </Node>
-                <Node name="User" expanded="True" />
+                <Node name="Shared" expanded="True" />
               </Node>
               <Node name="wwwroot" expanded="True">
+                <Node name="Images" expanded="True" />
                 <Node name="Uploads" expanded="True">
-                  <Node name="Users" expanded="True">
-                    <Node name="th" expanded="True">
-                      <Node name="kaliLinux.png" expanded="True" />
-                    </Node>
-                  </Node>
+                  <Node name="Users" expanded="True" />
                 </Node>
               </Node>
             </Node>
@@ -36,5 +40,4 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
 </Properties>

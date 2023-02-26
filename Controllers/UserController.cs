@@ -30,25 +30,21 @@ namespace ProjectManagementApplication.Controllers
                 if (ModelState.IsValid)
                 {
                     AddCookie(user);
-                    user.UserType = false;
-                    string wwwPath = this.Environment.WebRootPath;
+                    user.UserType = true;
                     string userdir = "Uploads/Users/" + user.UserName;
-                    userdir = Path.GetFullPath(Path.Combine(wwwPath, userdir));
                     user.ImageURL = userdir + "/" + user.Image!.FileName;
 
 
                     int userId = int.Parse(HttpContext.Request.Cookies["user"]!.Split(",")[0]);
                     UserRepository repo = new(HttpContext,userId);
-                    Console.WriteLine("Okkkk");
                     ViewBag.msg = repo.AddUser(user);
-                    
-
                     return View("Login");              
                 }
             }
             catch (Exception ex)
             {
-                ModelState.AddModelError("", ex + "ERROR: Unable to create account. Try again, and if the problem persists contact system administrator.");
+                ModelState.AddModelError("", ex + 
+                "ERROR: Unable to create account. Try again, and if the problem persists contact system administrator.");
             }
             return View(user); 
         }
@@ -64,8 +60,10 @@ namespace ProjectManagementApplication.Controllers
             try
             {
                 object errormsg;
-                int userId = int.Parse(HttpContext.Request.Cookies["user"]!.Split(",")[0]);
-                UserRepository repo = new(HttpContext,userId);
+
+                // int userId = int.Parse(HttpContext.Request.Cookies["user"]!.Split(",")[0]);
+
+                UserRepository repo = new(HttpContext,user.Id);
                 IEnumerable<User> UsersList = repo.RetrieveUsers();
                
                 foreach (User _user in UsersList)
@@ -75,18 +73,22 @@ namespace ProjectManagementApplication.Controllers
                         if (_user.Password!.Equals(user.Password))
                         {
                             AddCookie(_user);
-                            //HttpContext.Session.SetString("user", JsonSerializer.Serialize(_user));
                             TempData["user"] =JsonSerializer.Serialize(_user);
-                            return (_user.UserType) ?  RedirectToAction("Index", "Admin",_user) : RedirectToAction("Index", "Dashboard");
+                            return (_user.UserType) ?
+                                RedirectToAction("Index", "Admin") :
+                                RedirectToAction("Index", "Dashboard");
                             
                         }
                     }
                 }
-                errormsg = "Invalid email or password";
-                ViewBag.msg = errormsg;
+                errormsg = "cred-error";
+                ViewBag.cred_msg = errormsg;
                 return View("Login");
             }
-            catch (Exception ex) { ModelState.AddModelError("", ex + "Unable to login. Try again, and if the problem persists contact system administrator."); }
+            catch (Exception ex) {
+                ModelState.AddModelError("", ex +
+                "Unable to login. Try again, and if the problem persists contact system administrator.");
+            }
             return View("Login");
         }
 
@@ -95,9 +97,9 @@ namespace ProjectManagementApplication.Controllers
         {
             CookieOptions options = new CookieOptions();
             options.Expires = DateTime.Now.AddMinutes(30);
-
+            
+            // Add cookies in the formate: "userid,userType"
             Response.Cookies.Append("user", user.Id.ToString()+","+user.UserType.ToString());
-            // Response.Cookies.Append("usertype", user.UserType.ToString());
         }
 
       

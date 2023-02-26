@@ -30,8 +30,19 @@ namespace ProjectManagementApplication.Controllers
                 TempData["login_error"] = errormsg;
                 return RedirectToAction("Login", "User", errormsg);
             }
+            int userId = int.Parse(HttpContext.Request.Cookies["user"]!.Split(",")[0]);
+            UserRepository repo = new(HttpContext, userId);
+            User user = repo.RetrieveUser(userId)!;
+            InvoiceRepository invoiceRepository = new(HttpContext,0);
+            List<Invoice> invoices = invoiceRepository.RetrieveAllInvoices();
 
-            return View();
+            int users_count = repo.Count();
+            int services_count = (new ServiceRepository(HttpContext, userId)).Count();
+            int projects_count = (new ProjectRepository(HttpContext, userId)).Count();
+
+            Tuple<int, int, int> info_tuple = new(projects_count, services_count, users_count);
+            Tuple<User,List<Invoice>, Tuple<int,int,int>> tuple = new(user,invoices,info_tuple);
+            return View(tuple);
         }
         [HttpGet]
         public IActionResult AddProject() { return View(); }
@@ -65,9 +76,56 @@ namespace ProjectManagementApplication.Controllers
             }
             return View(project);
         }
-
         [HttpGet]
-        public IActionResult DeleteProject() { return View("DeleteProject"); }
+        public IActionResult EditProject(int projectId)
+        {
+            object errormsg;
+            string userType = "True";
+            if (!HttpUtilities.ValidateState(HttpContext, userType))
+            {
+                errormsg = "YOU ARE NOT LOGGED IN";
+                TempData["login_error"] = errormsg;
+                return RedirectToAction("Login", "User", errormsg);
+            }
+
+            int userId = int.Parse(HttpContext.Request.Cookies["user"]!.Split(",")[0]);
+            ProjectRepository repo = new(HttpContext, userId);
+            Project proj = repo.RetrieveProject(projectId);
+            Console.WriteLine($"Project reterived {proj.Name}");
+            return View(proj);
+        }
+        [HttpPost]
+        public IActionResult EditProject(Project project)
+        {
+            object errormsg;
+            string userType = "True";
+            if (!HttpUtilities.ValidateState(HttpContext, userType))
+            {
+                errormsg = "YOU ARE NOT LOGGED IN";
+                TempData["login_error"] = errormsg;
+                return RedirectToAction("Login", "User", errormsg);
+            }
+
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    int userId = int.Parse(HttpContext.Request.Cookies["user"]!.Split(",")[0]);
+                    ProjectRepository repo = new(HttpContext, userId);
+                    repo.UpdateProject(project);
+                    TempData["success"] = "Project details updated successfully";
+                    return View("DisplayAllProjetcs");
+                }
+            }
+            catch (DataException)
+            {
+                //Log the error (uncomment dex variable name and add a line here to write a log.
+                ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists see your system administrator.");
+            }
+            return View("DisplayAllProjetcs");
+        }
+        [HttpGet]
+        public IActionResult DeleteProject() { return View(); }
         [HttpPost]
         public IActionResult DeleteProject(int id)
         {
@@ -91,8 +149,19 @@ namespace ProjectManagementApplication.Controllers
             TempData["success"] = "Project deleted successfully";
             return RedirectToAction("Index");
         }
+        public IActionResult DisplayAllProjects()
+        {
+            int userId = int.Parse(HttpContext.Request.Cookies["user"]!.Split(",")[0]);
+            UserRepository userrepo = new(HttpContext, userId);
+            ProjectRepository projrepo = new(HttpContext, userId);
+            List<Project> projects = projrepo.RetrieveAllProjects();
+
+            Tuple<User, List<Project>> tuple = new(userrepo.RetrieveUser(userId)!, projects);
+
+            return View(tuple);
+        }
         [HttpGet]
-        public IActionResult DeleteUser() { return View("DeleteUser"); }
+        public IActionResult DeleteUser() { return View(); }
         [HttpPost]
         public IActionResult DeleteUser(int id)
         {
@@ -127,8 +196,9 @@ namespace ProjectManagementApplication.Controllers
         {
             int userId = int.Parse(HttpContext.Request.Cookies["user"]!.Split(",")[0]);
             UserRepository repo = new(HttpContext,userId);
-            List<User> users = repo.RetrieveUsers().ToList<User>();
-            return View(users);
+            User user = repo.RetrieveUser(userId)!;
+            Tuple<User, List<User>> tuple = new(user,repo.RetrieveUsers().ToList<User>());
+            return View(tuple);
             
         }
         [HttpGet]
@@ -165,43 +235,6 @@ namespace ProjectManagementApplication.Controllers
             }
             return View(service);
         }
-    
-        /*
-        
-        [HttpGet]
-        public IActionResult Login()
-        {
-            return View();
-        }
-        [HttpPost]
-        public IActionResult Login(User user) //Aauthenticate
-        {
-
-
-            object errormsg;
-            IEnumerable<User> CustomersList = db.Users;
-            foreach (User u in CustomersList)
-            {
-                if (u.UserEmail.Equals(user.UserEmail))
-                {
-                    if (u.Password.Equals(user.Password))
-                    {
-                        if (!u.UserType) {
-                            errormsg = "You dont have permission to login";
-                            ViewBag.msg = errormsg;
-                            return View("Login");
-                        }
-                        else { return RedirectToAction("AdminDashboard", "Admin"); }
-                            
-                        
-                    }
-                }
-            }
-            errormsg = "Invalid email or password";
-            ViewBag.msg = errormsg;
-            return View("Login");
-        }
-        */
 
     }
 }

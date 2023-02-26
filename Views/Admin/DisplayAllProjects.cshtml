@@ -1,0 +1,54 @@
+﻿@using ProjectManagementApplication.Models;
+@model Tuple<User, List<Project>>;
+
+@{
+    Layout = "_LayoutAdminDashboard";
+}
+
+@section userinfo {
+    <div class="dropdown">
+        <img src="~/@Model.Item1.ImageURL" alt="profile" class="rounded-circle" width="50" height="50">
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item" asp-controller="User" asp-action="Profile">Profile</a></li>
+            <li><a class="dropdown-item" asp-controller="User" asp-action="Logout">Logout</a></li>
+        </ul>
+    </div>
+}
+<!-- Destaials Section -->
+<div class="col-md-10">
+    <h1>Projects</h1>
+    <div class="row pe-4" style="margin-left: 90%;">
+        <button type="button" asp-action="AddProject" class="btn btn-primary">Add New</button>
+    </div>
+    <div class="row row-cols-3 row-cols-md-3 px-3">
+        @foreach (Project project in Model.Item2)
+        {
+            <div class="card mb-3 me-2 shadow-lg" style="max-width: 32%; padding: 0px;">
+                <h3 class="card-header bg-primary text-white">@project.Name</h3>
+                <div class="card-body">
+                    <h5 class="card-title">Owner</h5>
+                    <h6 class="card-subtitle text-muted">Dated: @project.CreatedDate</h6>
+                    @if (@project.ProjectStatus == true)
+                    {
+                        <span class="badge rounded-pill bg-success">Completed</span>
+                    }
+                    else if (@project.ProjectStatus == false)
+                    {
+                        <span class="badge rounded-pill bg-warning">In Progress</span>
+                    }
+                    else
+                    {
+                        <span class="badge rounded-pill bg-danger">Canceled</span>
+                    }
+                </div>
+
+                <div class="card-body">
+                    <p class="card-text">@project.Description</p>
+                    <a asp-action="EditProject" asp-route-id="@project.Id" class="card-link btn btn-info">Edit</a>
+                    <a asp-action="DeleteProject" asp-route-id="@project.Id" class="card-link btn btn-danger">Delete</a>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<!-- Details Section ends here -->

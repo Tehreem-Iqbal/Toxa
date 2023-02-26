@@ -5,40 +5,36 @@
       "PackagePath": "staticwebassets/ProjectManagementApplication.bundle.scp.css"
     },
     {
-      "Id": "/Users/ali/Toxa/wwwroot/Uploads/Users/Faran/me_white.png/me_white.png",
-      "PackagePath": "staticwebassets/Uploads/Users/Faran/me_white.png/me_white.png"
+      "Id": "/Users/ali/Toxa/wwwroot/Images/Logo.png",
+      "PackagePath": "staticwebassets/Images/Logo.png"
     },
     {
-      "Id": "/Users/ali/Toxa/wwwroot/Uploads/Users/Tehreem/me_white.png/me_white.png",
-      "PackagePath": "staticwebassets/Uploads/Users/Tehreem/me_white.png/me_white.png"
+      "Id": "/Users/ali/Toxa/wwwroot/Images/project-logo.png",
+      "PackagePath": "staticwebassets/Images/project-logo.png"
     },
     {
-      "Id": "/Users/ali/Toxa/wwwroot/Uploads/Users/ali/IMG_1802.jpg",
-      "PackagePath": "staticwebassets/Uploads/Users/ali/IMG_1802.jpg"
+      "Id": "/Users/ali/Toxa/wwwroot/Images/service-logo.png",
+      "PackagePath": "staticwebassets/Images/service-logo.png"
     },
     {
-      "Id": "/Users/ali/Toxa/wwwroot/Uploads/Users/ali/me_white.png/me_white.png",
-      "PackagePath": "staticwebassets/Uploads/Users/ali/me_white.png/me_white.png"
+      "Id": "/Users/ali/Toxa/wwwroot/Images/users-logo.png",
+      "PackagePath": "staticwebassets/Images/users-logo.png"
     },
     {
-      "Id": "/Users/ali/Toxa/wwwroot/Uploads/Users/hassanDSC_0362.jpg/DSC_0362.jpg",
-      "PackagePath": "staticwebassets/Uploads/Users/hassanDSC_0362.jpg/DSC_0362.jpg"
+      "Id": "/Users/ali/Toxa/wwwroot/Uploads/Users/ali/CF29138B-9C40-41EC-BD66-AC0459D6BD33_1_105_c.jpeg",
+      "PackagePath": "staticwebassets/Uploads/Users/ali/CF29138B-9C40-41EC-BD66-AC0459D6BD33_1_105_c.jpeg"
     },
     {
-      "Id": "/Users/ali/Toxa/wwwroot/Uploads/Users/iam/white-bg-logo.jpg/white-bg-logo.jpg",
-      "PackagePath": "staticwebassets/Uploads/Users/iam/white-bg-logo.jpg/white-bg-logo.jpg"
+      "Id": "/Users/ali/Toxa/wwwroot/Uploads/Users/ali/me_longhiars.JPG",
+      "PackagePath": "staticwebassets/Uploads/Users/ali/me_longhiars.JPG"
     },
     {
-      "Id": "/Users/ali/Toxa/wwwroot/Uploads/Users/raza/47E75CF5-BB11-41C0-8CEC-D91F9C2FCE6F.JPEG",
-      "PackagePath": "staticwebassets/Uploads/Users/raza/47E75CF5-BB11-41C0-8CEC-D91F9C2FCE6F.JPEG"
+      "Id": "/Users/ali/Toxa/wwwroot/Uploads/Users/bcs/CF29138B-9C40-41EC-BD66-AC0459D6BD33_1_105_c.jpeg",
+      "PackagePath": "staticwebassets/Uploads/Users/bcs/CF29138B-9C40-41EC-BD66-AC0459D6BD33_1_105_c.jpeg"
     },
     {
-      "Id": "/Users/ali/Toxa/wwwroot/Uploads/Users/th/kaliLinux.png/kaliLinux.png",
-      "PackagePath": "staticwebassets/Uploads/Users/th/kaliLinux.png/kaliLinux.png"
-    },
-    {
-      "Id": "/Users/ali/Toxa/wwwroot/css/custom.css",
-      "PackagePath": "staticwebassets/css/custom.css"
+      "Id": "/Users/ali/Toxa/wwwroot/css/bootstrap.min.css",
+      "PackagePath": "staticwebassets/css/bootstrap.min.css"
     },
     {
       "Id": "/Users/ali/Toxa/wwwroot/css/site.css",

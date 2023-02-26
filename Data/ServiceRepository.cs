@@ -37,6 +37,10 @@ namespace ProjectManagementApplication.Data
             db.Service.Remove(s);
             db.SaveChanges();
         }
+        public int Count()
+        {
+            return db.Service.Count<Service>();
+        }
     }
 
 }

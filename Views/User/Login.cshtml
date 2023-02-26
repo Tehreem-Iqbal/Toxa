@@ -1,32 +1,63 @@
 ﻿@using ProjectManagementApplication.Models;
 @model User;
 @{
-    Layout = "_LayoutLoginSignup";
-}
-<div class="login-container">
-    <div class="login">
-        <h1 class="text-center">Log In</h1>
-        <form method="post" action="Login">   
-        <span class="text-dark text-center"> @ViewBag.success</span>
-        <span class="text-danger text-center"> @TempData["login_error"]</span>
-    <div class="form-group">
-        <label asp-for="UserEmail">Email</label>
-        <input asp-for="UserEmail" type="email" class="form-control" placeholder="Enter your email">
-        <span asp-validation-for="UserEmail" class="text-danger"></span>
+    Layout = "_LayoutForm";
+    string msg = ViewBag.msg;
+    string cred_msg = ViewBag.cred_msg;
 
-        <label asp-for="Password">Password</label>
-        <input asp-for="Password" type="password" class="form-control" placeholder="Enter your password">
-        <span asp-validation-for="Password" class="text-danger"></span>
+}
+
+@if (msg != null || (cred_msg != null))
+{
+    <div class="alert alert-dismissible alert-danger">
+        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+        <strong>Oh snap!</strong>
+        @if (msg == "duplicate-user")
+        {
+            <p>This email has alread been registered.</p>
+        }
+        else if (msg == "file-error")
+        {
+            <p>This username has alread been occupied.</p>
+        }
+        else if(cred_msg == "cred-error")
+        {
+            <p>Email os Password is wrong. Forget Password? Ab kuch ni hoskta. SORRY</p>
+        }
     </div>
-    <span class="text-danger"> @ViewBag.msg</span>
-    <div class="sub-btn">
-        <button type="submit" class="btn btn-info text-center">Login</button>
-    </div>
-        </form>
-        <div>
-            <p class="text-black text-center">Don't have an account? <a class="nav-link text-dark text-center" asp-area="" asp-controller="User" asp-action="SignUp">SignUp</a></p>
-            
+
+    @if (msg == "success")
+    {
+        <div class="alert alert-dismissible alert-success">
+            <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            <strong>SUCCESS!</strong> <p>You have successfully creaded acount</p>.
         </div>
-    </div>
-    
-</div>
+    }
+}
+<form method="post" action="login" enctype="multipart/form-data">
+    <fieldset>
+        <legend class="text-center">Login</legend>
+
+        <div class="form-group">
+
+            <label asp-for="UserEmail" class="form-label mt-2">Email</label>
+            <input asp-for="UserEmail" type="email" class="form-control shadow p-2" placeholder="Enter your email">
+            <span asp-validation-for="UserEmail" class="invalid-feedback"></span>
+
+        </div>
+
+        <div class="form-group">
+            <label asp-for="Password" class="form-label mt-2">Password</label>
+            <input asp-for="Password" type="password" class="form-control shadow p-2" placeholder="Enter your password">
+            <span asp-validation-for="Password" class="invalid-feedback"></span>
+        </div>
+
+        <div class="form-group text-center">
+            <button type="submit" class="btn btn-light mt-5">Login</button>
+            <p class="mt-4">
+                Not a member?
+                <a asp-controller="User" asp-action="SignUp" class="text-bg-primary">Sign Up</a>
+            </p>
+        </div>
+    </fieldset>
+</form>

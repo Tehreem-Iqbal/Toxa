@@ -1,40 +1,51 @@
-﻿@model List<ProjectManagementApplication.Models.User>
+﻿@model Tuple<User, List<User>>;
+@{
 
-<div>
-    <h1 class="text-center">TOXA</h1>
-</div>
+    ViewBag.Title = "Admin Dashboard";
+    Layout = "~/Views/Shared/_LayoutAdminDashboard.cshtml";
+}
 
-<div>
-    <h1 class="text-center">Admin Dashboard</h1>
-</div>
+@section userinfo {
+    <div class="dropdown">
+        <img src="~/@Model.Item1.ImageURL" alt="profile" class="rounded-circle" width="50" height="50">
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item" asp-controller="User" asp-action="Profile">Profile</a></li>
+            <li><a class="dropdown-item" asp-controller="User" asp-action="Logout">Logout</a></li>
+        </ul>
+    </div>
+}
 
-<div class="app-container">
-    <table class="table table-striped table-hover table-striped">
-        <thead>
-            <tr>
-                <th>Name</th>
-                <th>Email</th>
-                <th></th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (User user in Model)
-            {
-
+<!-- Destaials Section -->
+<div class="col-md-10">
+    <h1>All Users</h1>
+    <div class="row row-cols-1 row-cols-md-1 mt-3" style="height: 67%; overflow-y: auto;">
+        <table class="table table-fixed table-striped table-hover table-striped">
+            <thead class="bg-primary text-white" style="position: sticky; top: 0;">
                 <tr>
-                    <td>   @user.UserName       </td>
-                    <td>   @user.UserEmail       </td>
-                    <td>
-
-                        <a class="btn btn-info" asp-action="UserDetails" asp-route-userid="@user.Id">Details</a>
-                        <a class="btn btn-warning" asp-action="Edit" asp-route-id="@user.Id">Edit</a>
-                        <a class="btn btn-danger" asp-action="Remove" asp-route-id="@user.Id">Remove</a>
-                    </td>
+                    <th class="text-center">Name</th>
+                    <th class="text-center">Email</th>
+                    <th class="text-center">Action</th>
                 </tr>
+            </thead>
+            <tbody>
+                @foreach (User user in Model.Item2)
+                {
 
-            }
+                    <tr>
+                        <td>   @user.UserName       </td>
+                        <td>   @user.UserEmail       </td>
+                        <td>
 
+                            <a class="btn btn-info" asp-action="UserDetails" asp-route-userid="@user.Id">Details</a>
+                            <a class="btn btn-warning" asp-action="Edit" asp-route-id="@user.Id">Edit</a>
+                            <a class="btn btn-danger" asp-action="Remove" asp-route-id="@user.Id">Remove</a>
+                        </td>
+                    </tr>
 
-        </tbody>
-    </table>
+                }
+
+            </tbody>
+        </table>
+    </div>
 </div>
+<!-- Details Section ends here -->

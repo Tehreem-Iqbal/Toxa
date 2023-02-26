@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using ProjectManagementApplication.Models;
 using System.Data;
 using System.Globalization;
@@ -24,16 +25,18 @@ namespace ProjectManagementApplication.Data
 
             db.SaveChanges();
         }
-        public Project? RetrieveProject(int id)
+        public Project RetrieveProject(int id)
         {
-            return db.Project.Find(id);
+            Project proj = new();
+            proj = (Project)db.Project.Find(Type Project, id);
+            Console.WriteLine($"ProjectRepo: {proj.Name}");
+            return proj;
         }
         public void RemoveProject(Project project)
         {
             db.Project.Remove(project);
             db.SaveChanges();
         }
-
         public List<Project> RetrieveUserProjects(User user)
         {
             List<Project> ProjectList = new List<Project>();
@@ -46,6 +49,18 @@ namespace ProjectManagementApplication.Data
                 }
             }
             return ProjectList;
+        }
+        public List<Project> RetrieveAllProjects()
+        {
+            return db.Project.ToList<Project>();
+        }
+        public void UpdateProject(Project project)
+        {
+            db.Project.Update(project);
+        }
+        public int Count()
+        {
+            return db.Project.Count<Project>();
         }
     }
 

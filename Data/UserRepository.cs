@@ -4,6 +4,7 @@ using System.Data;
 using System.Diagnostics.Eventing.Reader;
 using System.Globalization;
 using System.Linq;
+using System;
 
 namespace ProjectManagementApplication.Data
 {
@@ -21,20 +22,29 @@ namespace ProjectManagementApplication.Data
         
         public string AddUser(User user)
         {
-            string msg;
-            if (DuplicateCheck(user.UserEmail!)) {
-                msg = "User already exists";
-                return msg;
-            }
-            if (!FileUpload(user.Image!, user.ImageURL!)) {
-                msg = "File Not Uploaded";
-                return msg;
-            }
+            try
+            {
+                string msg;
+                if (DuplicateCheck(user.UserEmail!))
+                {
+                    msg = "duplicate-user";
+                    return msg;
+                }
+                if (!FileUpload(user.Image!, user.ImageURL!))
+                {
+                    msg = "file-error";
+                    return msg;
+                }
 
-            db.Users.Add(user);
-            db.SaveChanges();
-            msg = "User Added";
-            return msg;
+                db.Users.Add(user);
+                db.SaveChanges();
+                msg = "success";
+                return msg;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"User not added: {ex}");
+            }
         }
         private bool DuplicateCheck(string email)
         {
@@ -51,25 +61,21 @@ namespace ProjectManagementApplication.Data
         }
         private bool FileUpload(IFormFile file, string path)
         {
-            Console.WriteLine("upload1");
-            
+            int index = path.LastIndexOf("/");
+            string dir = string.Concat("wwwroot/", path.AsSpan(0, index));
             try
             {
                 if (file.Length > 0)
                 {
-                    
-
-                    Console.WriteLine(path);
-                    if (!Directory.Exists(path))
+                    if (!Directory.Exists(dir))
                     {
-                        Directory.CreateDirectory(path);
-                        Console.WriteLine("dir created");
+                        Directory.CreateDirectory(dir);
                     }
-                    using (var fileStream = new FileStream(Path.Combine(path, file.FileName), FileMode.Create))
+                    using (var fileStream = new FileStream(Path.Combine(dir, file.FileName), FileMode.Create))
                     {
                         file.CopyTo(fileStream);
                     }
-                    Console.WriteLine("upload2");
+                    Console.WriteLine("File has been uplaoded");
                     return true;
                 }
                 else
@@ -95,6 +101,11 @@ namespace ProjectManagementApplication.Data
         {
             db.Users.Remove(user);
             db.SaveChanges();
+        }
+
+        public int Count()
+        {
+            return db.Users.Count<User>();
         }
     }
 }

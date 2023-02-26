@@ -22,5 +22,15 @@
   <ItemGroup>
     <Folder Include="Models\Interfaces\" />
     <Folder Include="Interfaces\" />
+    <Folder Include="wwwroot\Uploads\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="wwwroot\Uploads\Users\Tehreem\CF29138B-9C40-41EC-BD66-AC0459D6BD33_1_105_c.jpeg" />
+    <Content Remove="wwwroot\Uploads\Users\Tehreem\me_white.png" />
+    <Content Remove="wwwroot\Uploads\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="wwwroot\Uploads\Users\Tehreem\CF29138B-9C40-41EC-BD66-AC0459D6BD33_1_105_c.jpeg" />
+    <None Include="wwwroot\Uploads\Users\Tehreem\me_white.png" />
   </ItemGroup>
 </Project>
