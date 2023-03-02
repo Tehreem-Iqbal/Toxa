@@ -1,12 +1,11 @@
-﻿@using ProjectManagementApplication.Models;
-@model Project;
+﻿@model Service;
 @{
     Layout = "_LayoutForm";
 }
 
-<form method="post" action="EditProject" enctype="multipart/form-data">
+<form method="post" action="EditService" enctype="multipart/form-data">
     <fieldset>
-        <legend class="text-center">Edit Project</legend>
+        <legend class="text-center">Edit Service</legend>
 
         <div class="form-group">
             <fieldset disabled="">
@@ -17,23 +16,23 @@
 
         <div class="form-group">
 
-            <label class="col-form-label mt-4" asp-for="@Model.Name">Project Name</label>
+            <label class="col-form-label mt-4" asp-for="@Model.Name">Service Name</label>
             <input asp-for="@Model.Name" type="text" class="form-control" value="@Model.Name">
 
             <label class="col-form-label mt-4" asp-for="@Model.Description">Description</label>
             <textarea class="form-control" rows="3" spellcheck="true">@Model.Description</textarea>
 
-            <label  asp-for="@Model.Cost" class="col-form-label">Project Cost</label>
+            <label asp-for="@Model.Charges" class="col-form-label">Service Charges</label>
             <div class="input-group mb-3">
                 <span class="input-group-text">Rs.</span>
-                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" value="@Model.Cost">
+                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" value="@Model.Charges">
                 <span class="input-group-text">.00</span>
             </div>
 
         </div>
         <div class="form-group text-center">
             <button type="submit" class="btn btn-light mt-5">Update</button>
-            <a asp-action="DisplayAllProjects" class="btn btn-secondary mt-5">Cancel</a>
+            <a asp-action="DisplayAllServices" class="btn btn-secondary mt-5">Cancel</a>
         </div>
     </fieldset>
 </form>

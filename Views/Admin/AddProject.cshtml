@@ -3,33 +3,44 @@
     Layout = "_LayoutForm";
 }
 
-<form >
+<form method="post" action="AddProject" enctype="multipart/form-data">
     <fieldset>
         <legend class="text-center">Add Project</legend>
 
 
         <div class="form-group">
 
-            <label class="col-form-label mt-4" asp-for="Name">Project Name</label>
-            <input asp-for="Name" type="text" class="form-control" placeholder="Enter Project Name">
+            <label class="col-form-label mt-4">Project Name</label>
+            <input asp-for="@Model.Name" type="text" class="form-control" placeholder="Enter Project Name">
 
-            <label class="col-form-label mt-4" asp-for="Description">Description</label>
-            <textarea class="form-control" rows="3" spellcheck="true" placeholder="Enter Project Description"></textarea>
+            <label class="col-form-label mt-4">Description</label>
+            <input asp-for="@Model.Description" type="text" class="form-control" placeholder="Enter Description">
 
-            <label asp-for="Cost"> Project Cost </label>
-            <input asp-for="Cost" type="number" class="form-control">
+            <!-- Space for partial view-->
 
-            <label  asp-for="Cost" class="col-form-label">Project Cost</label>
+            <label class="col-form-label mt-4">User ID</label>
+            <input asp-for="@Model.CustomerId" type="number" class="form-control" placeholder="Enter User ID">
+
+
+            <label class="col-form-label mt-4">Completion Rate</label>
+            <input asp-for="@Model.CompletionRate" type="number" class="form-control" placeholder="Enter completion rate">
+
+
+            <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+            <label class="form-check-label" asp-for="@Model.ProjectStatus">Is Project Completed?</label>
+
+
+            <label class="col-form-label">Project Cost</label>
             <div class="input-group mb-3">
                 <span class="input-group-text">Rs.</span>
-                <input type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="Enter Project Cost">
+                <input asp-for="@Model.Cost" type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="Enter Project Cost">
                 <span class="input-group-text">.00</span>
             </div>
 
         </div>
         <div class="form-group text-center">
-            <button type="submit" class="btn btn-light mt-5">Update</button>
-            <a asp-action="DisplayAllProjects" class="btn btn-secondary mt-5">Cancel</a>
+            <button type="submit" class="btn btn-light mt-5">Add</button>
+            <a href="/Admin/DisplayAllProjects" class="btn btn-secondary mt-5">Cancel</a>
         </div>
     </fieldset>
 </form>

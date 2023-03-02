@@ -18,7 +18,9 @@
 <div class="col-md-10">
     <h1>Projects</h1>
     <div class="row pe-4" style="margin-left: 90%;">
-        <button type="button" asp-action="AddProject" class="btn btn-primary">Add New</button>
+        <form method="get" asp-action="AddProject">
+            <button type="submit" class="btn btn-primary">Add New</button>
+        </form>
     </div>
     <div class="row row-cols-3 row-cols-md-3 px-3">
         @foreach (Project project in Model.Item2)
@@ -44,8 +46,8 @@
 
                 <div class="card-body">
                     <p class="card-text">@project.Description</p>
-                    <a asp-action="EditProject" asp-route-id="@project.Id" class="card-link btn btn-info">Edit</a>
-                    <a asp-action="DeleteProject" asp-route-id="@project.Id" class="card-link btn btn-danger">Delete</a>
+                    <a asp-action="EditProject" asp-route-projectId="@project.Id" class="card-link btn btn-info">Edit</a>
+                    <a asp-action="DeleteProject" asp-route-projectId="@project.Id" class="card-link btn btn-danger">Delete</a>
                 </div>
             </div>
         }

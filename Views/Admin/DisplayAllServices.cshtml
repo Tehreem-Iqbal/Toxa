@@ -18,69 +18,26 @@
 <div class="col-md-10">
     <h1>Services</h1>
     <div class="row me-4" style="margin-left: 90%;">
-        <button type="button" class="btn btn-primary">Add New</button>
+        <button asp-action="AddService" type="button" class="btn btn-primary">Add New</button>
     </div>
     <div class="row row-cols-3 row-cols-md-2 row-cols-sm-1 mt-3">
+        @foreach (Service service in Model.Item2)
+         {
+            <div class="card mb-3 me-2 shadow-lg" style="max-width: 32%; padding: 0px;">
+                <h3 class="card-header bg-primary text-white">@service.Name</h3>
+                <div class="card-body">
+                    <!-- <h5 class="card-title">Special title treatment</h5> -->
+                    <h6 class="card-subtitle text-muted">Added on: @service.CreatedDate</h6>
+                </div>
 
-        <div class="card mb-3 me-2 shadow-lg" style="max-width: 32%; padding: 0px;">
-            <h3 class="card-header bg-primary text-white">Service Name</h3>
-            <div class="card-body">
-                <!-- <h5 class="card-title">Special title treatment</h5> -->
-                <h6 class="card-subtitle text-muted">Added on: 14-Aug-1947</h6>
+                <div class="card-body">
+                    <p class="card-text">@service.Description</p>
+
+                    <a asp-action="EditService" asp-route-serviceId="@service.Id" class="card-link btn btn-info">Edit</a>
+                    <a asp-action="DeleteService" asp-route-serviceId="@service.Id" class="card-link btn btn-danger">Delete</a>
+                </div>
             </div>
-
-            <div class="card-body">
-                <p class="card-text">This is Description. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
-                <a href="./ServiceEdit.html" class="card-link btn btn-info">Edit</a>
-                <a href="#" class="card-link btn btn-danger">Delete</a>
-            </div>
-        </div>
-
-        <div class="card mb-3 me-2 shadow-lg" style="max-width: 32%; padding: 0px;">
-            <h3 class="card-header bg-primary text-white">Service Name</h3>
-            <div class="card-body">
-                <!-- <h5 class="card-title">Special title treatment</h5> -->
-                <h6 class="card-subtitle text-muted">Added on: 14-Aug-1947</h6>
-            </div>
-
-            <div class="card-body">
-                <p class="card-text">This is Description. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
-                <a href="#" class="card-link btn btn-info shadow">Edit</a>
-                <a href="#" class="card-link btn btn-danger shadow">Delete</a>
-            </div>
-        </div>
-
-        <div class="card mb-3 me-2 shadow-lg" style="max-width: 32%; padding: 0px;">
-            <h3 class="card-header bg-primary text-white">Service Name</h3>
-            <div class="card-body">
-                <!-- <h5 class="card-title">Special title treatment</h5> -->
-                <h6 class="card-subtitle text-muted">Added on: 14-Aug-1947</h6>
-            </div>
-
-            <div class="card-body">
-                <p class="card-text">This is Description. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
-                <a href="#" class="card-link btn btn-info">Edit</a>
-                <a href="#" class="card-link btn btn-danger">Delete</a>
-            </div>
-        </div>
-
-        <div class="card mb-3 me-2 shadow-lg" style="max-width: 32%; padding: 0px;">
-            <h3 class="card-header bg-primary text-white">Service Name</h3>
-            <div class="card-body">
-                <!-- <h5 class="card-title">Special title treatment</h5> -->
-                <h6 class="card-subtitle text-muted">Added on: 14-Aug-1947</h6>
-            </div>
-
-            <div class="card-body">
-                <p class="card-text">This is Description. Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-
-                <a href="#" class="card-link btn btn-info">Edit</a>
-                <a href="#" class="card-link btn btn-danger">Delete</a>
-            </div>
-        </div>
+         }
     </div>
 </div>
 <!-- Details Section ends here -->

@@ -1,62 +1,58 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using ProjectManagementApplication.Models;
+using ProjectManagementApplication.Models.Interfaces;
 using System.Data;
 using System.Globalization;
 using System.Linq;
 
 namespace ProjectManagementApplication.Data
 {
-    public class ProjectRepository
+    public class ProjectRepository : IProjectRepository
     {
-        private Dbcontext db;
-        private readonly HttpContext _httpContext;
-        public ProjectRepository(HttpContext httpContext, int userId)
+
+        private readonly Dbcontext db;
+
+        public ProjectRepository(Dbcontext dbcontext)
         {
-            _httpContext = httpContext;
-            db = new Dbcontext();
-            db.userId = userId;
+            db = dbcontext;
         }
         public void AddProject(Project Proj)
         {
-            string cookie = _httpContext.Request.Cookies["user"]!;
-            // Proj.CreatedByUserId();
             db.Project.Add(Proj);
 
             db.SaveChanges();
         }
-        public Project RetrieveProject(int id)
+        public Project GetProject(int id)
         {
-            Project proj = new();
-            proj = (Project)db.Project.Find(Type Project, id);
-            Console.WriteLine($"ProjectRepo: {proj.Name}");
-            return proj;
+            return db.Project.Find(id)!;
         }
         public void RemoveProject(Project project)
         {
             db.Project.Remove(project);
             db.SaveChanges();
         }
-        public List<Project> RetrieveUserProjects(User user)
+        public List<Project> GetUserProjects(int userId)
         {
             List<Project> ProjectList = new List<Project>();
             IEnumerable<Project> AllProjects = db.Project;
             foreach (Project poject in AllProjects)
             {
-                if (poject.CustomerId == user.Id)
+                if (poject.CustomerId == userId)
                 {
                     ProjectList.Add(poject);
                 }
             }
             return ProjectList;
         }
-        public List<Project> RetrieveAllProjects()
+        public List<Project> GetAllProjects()
         {
             return db.Project.ToList<Project>();
         }
         public void UpdateProject(Project project)
         {
             db.Project.Update(project);
+            db.SaveChanges();
         }
         public int Count()
         {

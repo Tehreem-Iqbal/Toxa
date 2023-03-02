@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ProjectManagementApplication.Data;
 using ProjectManagementApplication.Models;
+using ProjectManagementApplication.Models.Interfaces;
 using System.Data;
 using System.Globalization;
 using System.IO;
@@ -11,11 +12,21 @@ namespace ProjectManagementApplication.Controllers
 {
     public class UserController : Controller
     {
+        private readonly IUserRepository userRepository;
+        private readonly IProjectRepository projectRepository;
+        private readonly IServiceRepository serviceRepository;
+        private readonly IInvoiceRepository invoiceRepository;
+
         private readonly IWebHostEnvironment Environment;
-        public UserController(IWebHostEnvironment environment)
+        public UserController(IWebHostEnvironment environment, IUserRepository _userRepository, IProjectRepository _projectRepository,
+                        IServiceRepository _serviceRepository, IInvoiceRepository _invoiceRepository)
         {
             Environment = environment;
-        }    
+            userRepository = _userRepository;
+            projectRepository = _projectRepository;
+            invoiceRepository = _invoiceRepository;
+            serviceRepository = _serviceRepository;
+        }
 
         [HttpGet]
         public IActionResult SignUp()
@@ -34,11 +45,17 @@ namespace ProjectManagementApplication.Controllers
                     string userdir = "Uploads/Users/" + user.UserName;
                     user.ImageURL = userdir + "/" + user.Image!.FileName;
 
-
                     int userId = int.Parse(HttpContext.Request.Cookies["user"]!.Split(",")[0]);
-                    UserRepository repo = new(HttpContext,userId);
-                    ViewBag.msg = repo.AddUser(user);
-                    return View("Login");              
+                    string msg = userRepository.AddUser(user);
+                    ViewBag.msg = msg;
+                    if(msg == "success")
+                    {
+                        return View("Login");
+                    }
+                    else
+                    {
+                        return View();              
+                    }
                 }
             }
             catch (Exception ex)
@@ -61,10 +78,7 @@ namespace ProjectManagementApplication.Controllers
             {
                 object errormsg;
 
-                // int userId = int.Parse(HttpContext.Request.Cookies["user"]!.Split(",")[0]);
-
-                UserRepository repo = new(HttpContext,user.Id);
-                IEnumerable<User> UsersList = repo.RetrieveUsers();
+                List<User> UsersList = userRepository.GetAllUsers();
                
                 foreach (User _user in UsersList)
                 {
@@ -98,7 +112,6 @@ namespace ProjectManagementApplication.Controllers
             CookieOptions options = new CookieOptions();
             options.Expires = DateTime.Now.AddMinutes(30);
             
-            // Add cookies in the formate: "userid,userType"
             Response.Cookies.Append("user", user.Id.ToString()+","+user.UserType.ToString());
         }
 

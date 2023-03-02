@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ProjectManagementApplication.Data;
 using ProjectManagementApplication.Models;
+using ProjectManagementApplication.Models.Interfaces;
 using ProjectManagementApplication.Utilities;
 using System.Data;
 using System.Globalization;
@@ -8,7 +9,21 @@ using System.Linq;
 namespace ProjectManagementApplication.Controllers
 {
     public class AdminController : Controller
-    { 
+    {
+        private readonly IUserRepository userRepository;
+        private readonly IProjectRepository projectRepository;
+        private readonly IServiceRepository serviceRepository;
+        private readonly IInvoiceRepository invoiceRepository;
+
+        public AdminController(IUserRepository _userRepository, IProjectRepository _projectRepository,
+                        IServiceRepository _serviceRepository, IInvoiceRepository _invoiceRepository)
+        {
+            userRepository = _userRepository;
+            projectRepository = _projectRepository;
+            invoiceRepository = _invoiceRepository;
+            serviceRepository = _serviceRepository;
+        }
+
         public IActionResult Logout()
         {
             if (Request.Cookies["user"] != null)
@@ -31,24 +46,29 @@ namespace ProjectManagementApplication.Controllers
                 return RedirectToAction("Login", "User", errormsg);
             }
             int userId = int.Parse(HttpContext.Request.Cookies["user"]!.Split(",")[0]);
-            UserRepository repo = new(HttpContext, userId);
-            User user = repo.RetrieveUser(userId)!;
-            InvoiceRepository invoiceRepository = new(HttpContext,0);
+            User user = userRepository.GetUser(userId)!;
             List<Invoice> invoices = invoiceRepository.RetrieveAllInvoices();
 
-            int users_count = repo.Count();
-            int services_count = (new ServiceRepository(HttpContext, userId)).Count();
-            int projects_count = (new ProjectRepository(HttpContext, userId)).Count();
+            int users_count = userRepository.Count();
+            int services_count = serviceRepository.Count();
+            int projects_count = serviceRepository.Count();
 
             Tuple<int, int, int> info_tuple = new(projects_count, services_count, users_count);
             Tuple<User,List<Invoice>, Tuple<int,int,int>> tuple = new(user,invoices,info_tuple);
             return View(tuple);
         }
+
+        // Projects
         [HttpGet]
-        public IActionResult AddProject() { return View(); }
+        public IActionResult AddProject() {
+            Console.WriteLine("Ustaad g very great.");
+
+            return View();
+        }
         [HttpPost]
         public IActionResult AddProject(Project project)
         {
+                    Console.WriteLine("Ustaad g great.");
             object errormsg;
             string userType = "True";
             if (!HttpUtilities.ValidateState(HttpContext, userType))
@@ -63,8 +83,7 @@ namespace ProjectManagementApplication.Controllers
                 if (ModelState.IsValid)
                 {
                     int userId = int.Parse(HttpContext.Request.Cookies["user"]!.Split(",")[0]);
-                    ProjectRepository repo = new(HttpContext,userId);
-                    repo.AddProject(project);
+                    projectRepository.AddProject(project);
                     TempData["success"] = "Project added successfully";
                     return RedirectToAction("Index", "Admin");
                 }
@@ -89,8 +108,7 @@ namespace ProjectManagementApplication.Controllers
             }
 
             int userId = int.Parse(HttpContext.Request.Cookies["user"]!.Split(",")[0]);
-            ProjectRepository repo = new(HttpContext, userId);
-            Project proj = repo.RetrieveProject(projectId);
+            Project proj = projectRepository.GetProject(projectId);
             Console.WriteLine($"Project reterived {proj.Name}");
             return View(proj);
         }
@@ -111,10 +129,9 @@ namespace ProjectManagementApplication.Controllers
                 if (ModelState.IsValid)
                 {
                     int userId = int.Parse(HttpContext.Request.Cookies["user"]!.Split(",")[0]);
-                    ProjectRepository repo = new(HttpContext, userId);
-                    repo.UpdateProject(project);
+                    projectRepository.UpdateProject(project);
                     TempData["success"] = "Project details updated successfully";
-                    return View("DisplayAllProjetcs");
+                    return RedirectToAction("DisplayAllProjects");
                 }
             }
             catch (DataException)
@@ -122,11 +139,8 @@ namespace ProjectManagementApplication.Controllers
                 //Log the error (uncomment dex variable name and add a line here to write a log.
                 ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists see your system administrator.");
             }
-            return View("DisplayAllProjetcs");
+            return RedirectToAction("DisplayAllProjects");
         }
-        [HttpGet]
-        public IActionResult DeleteProject() { return View(); }
-        [HttpPost]
         public IActionResult DeleteProject(int id)
         {
             object errormsg;
@@ -138,32 +152,17 @@ namespace ProjectManagementApplication.Controllers
                 return RedirectToAction("Login", "User", errormsg);
             }
             int userId = int.Parse(HttpContext.Request.Cookies["user"]!.Split(",")[0]);
-            ProjectRepository repo = new(HttpContext,userId);
-            var obj = repo.RetrieveProject(id);
+            var obj = projectRepository.GetProject(id);
             if (obj == null)
             {
                 return NotFound();
             }
 
-            repo.RemoveProject(obj);
+            projectRepository.RemoveProject(obj);
             TempData["success"] = "Project deleted successfully";
             return RedirectToAction("Index");
         }
         public IActionResult DisplayAllProjects()
-        {
-            int userId = int.Parse(HttpContext.Request.Cookies["user"]!.Split(",")[0]);
-            UserRepository userrepo = new(HttpContext, userId);
-            ProjectRepository projrepo = new(HttpContext, userId);
-            List<Project> projects = projrepo.RetrieveAllProjects();
-
-            Tuple<User, List<Project>> tuple = new(userrepo.RetrieveUser(userId)!, projects);
-
-            return View(tuple);
-        }
-        [HttpGet]
-        public IActionResult DeleteUser() { return View(); }
-        [HttpPost]
-        public IActionResult DeleteUser(int id)
         {
             object errormsg;
             string userType = "True";
@@ -173,34 +172,18 @@ namespace ProjectManagementApplication.Controllers
                 TempData["login_error"] = errormsg;
                 return RedirectToAction("Login", "User", errormsg);
             }
-            int userId = int.Parse(HttpContext.Request.Cookies["user"]!.Split(",")[0]);
-            UserRepository repo = new(HttpContext,userId);
-            var obj = repo.RetrieveUser(id);
-            if (obj == null)
-            {
-                return NotFound();
-            }
 
-            repo.RemoveUser(obj);
-            TempData["success"] = "Project deleted successfully";
-            return RedirectToAction("Index");
-        }
-        public IActionResult UserDetails(int userid)
-        {
             int userId = int.Parse(HttpContext.Request.Cookies["user"]!.Split(",")[0]);
-            UserRepository repo = new(HttpContext,userId);
-            User user = repo.RetrieveUser(userid)!;
-            return View(user);
-        }
-        public IActionResult DisplayAllUsers()
-        {
-            int userId = int.Parse(HttpContext.Request.Cookies["user"]!.Split(",")[0]);
-            UserRepository repo = new(HttpContext,userId);
-            User user = repo.RetrieveUser(userId)!;
-            Tuple<User, List<User>> tuple = new(user,repo.RetrieveUsers().ToList<User>());
+
+            List<Project> projects = projectRepository.GetAllProjects();
+
+            Tuple<User, List<Project>> tuple = new(userRepository.GetUser(userId)!, projects);
+
             return View(tuple);
-            
         }
+
+
+        // Services
         [HttpGet]
         public IActionResult AddService() { return View(); }
         [HttpPost]
@@ -221,8 +204,7 @@ namespace ProjectManagementApplication.Controllers
                 if (ModelState.IsValid)
                 {
                     int userId = int.Parse(HttpContext.Request.Cookies["user"]!.Split(",")[0]);
-                    ServiceRepository repo = new(HttpContext, userId);
-                    repo.AddService(service);
+                    serviceRepository.AddService(service);
                     successmsg = "Service added successfully";
                     ViewBag.success = successmsg;
                     return View("Index");
@@ -234,6 +216,144 @@ namespace ProjectManagementApplication.Controllers
                 ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists see your system administrator.");
             }
             return View(service);
+        }
+        [HttpGet]
+        public IActionResult EditService(int serviceId)
+        {
+            object errormsg;
+            string userType = "True";
+            if (!HttpUtilities.ValidateState(HttpContext, userType))
+            {
+                errormsg = "YOU ARE NOT LOGGED IN";
+                TempData["login_error"] = errormsg;
+                return RedirectToAction("Login", "User", errormsg);
+            }
+
+            int userId = int.Parse(HttpContext.Request.Cookies["user"]!.Split(",")[0]);
+            Service? service = serviceRepository.RetrieveService(serviceId);
+            if(service == null)
+            {
+                Console.WriteLine("AdminController.EditServiceERRO: Service not found.");
+                return NotFound();
+            }
+            Console.WriteLine($"Service reterived {service.Name}");
+            return View(service);
+        }
+        [HttpPost]
+        public IActionResult EditService(Service service)
+        {
+            object errormsg;
+            string userType = "True";
+            if (!HttpUtilities.ValidateState(HttpContext, userType))
+            {
+                errormsg = "YOU ARE NOT LOGGED IN";
+                TempData["login_error"] = errormsg;
+                return RedirectToAction("Login", "User", errormsg);
+            }
+
+            try
+            {
+                if (ModelState.IsValid)
+                {
+                    int userId = int.Parse(HttpContext.Request.Cookies["user"]!.Split(",")[0]);
+                    serviceRepository.UpdateService(service);
+                    TempData["success"] = "Service details updated successfully";
+                    return RedirectToAction("DisplayAllServices");
+                }
+            }
+            catch (DataException)
+            {
+                //Log the error (uncomment dex variable name and add a line here to write a log.
+                ModelState.AddModelError("", "Unable to save changes. Try again, and if the problem persists see your system administrator.");
+            }
+            return RedirectToAction("DisplayAllServices");
+        }
+        public IActionResult DeleteService(int id)
+        {
+            object errormsg;
+            string userType = "True";
+            if (!HttpUtilities.ValidateState(HttpContext, userType))
+            {
+                errormsg = "YOU ARE NOT LOGGED IN";
+                TempData["login_error"] = errormsg;
+                return RedirectToAction("Login", "User", errormsg);
+            }
+            int userId = int.Parse(HttpContext.Request.Cookies["user"]!.Split(",")[0]);
+            Service? service = serviceRepository.RetrieveService(id);
+            if (service == null)
+            {
+                return NotFound();
+            }
+
+            serviceRepository.RemoveService(service);
+            TempData["success"] = "Service deleted successfully";
+            return RedirectToAction("DisplayAllServices");
+        }
+        public IActionResult DisplayAllServices()
+        {
+            object errormsg;
+            string userType = "True";
+            if (!HttpUtilities.ValidateState(HttpContext, userType))
+            {
+                errormsg = "YOU ARE NOT LOGGED IN";
+                TempData["login_error"] = errormsg;
+                return RedirectToAction("Login", "User", errormsg);
+            }
+            int userId = int.Parse(HttpContext.Request.Cookies["user"]!.Split(",")[0]);
+
+            List<Service> services = serviceRepository.GetAllServices();
+
+            Tuple<User, List<Service>> tuple = new(userRepository.GetUser(userId)!, services);
+
+            return View(tuple);
+        }
+
+
+
+        // Users
+        public IActionResult DeleteUser(int id)
+        {
+            object errormsg;
+            string userType = "True";
+            if (!HttpUtilities.ValidateState(HttpContext, userType))
+            {
+                errormsg = "YOU ARE NOT LOGGED IN";
+                TempData["login_error"] = errormsg;
+                return RedirectToAction("Login", "User", errormsg);
+            }
+            int userId = int.Parse(HttpContext.Request.Cookies["user"]!.Split(",")[0]);
+
+            userRepository.RemoveUser(id);
+            TempData["success"] = "Project deleted successfully";
+            return View("DisplayAllUsers");
+        }
+        public IActionResult UserDetails(int userid)
+        {
+            int userId = int.Parse(HttpContext.Request.Cookies["user"]!.Split(",")[0]);
+            User? user = userRepository.GetUser(userid);
+            if(user == null)
+            {
+                Console.WriteLine("AdminController.UserDetailsERROR: user not found.");
+                return NotFound();
+            }
+            return View(user);
+        }
+        public IActionResult DisplayAllUsers()
+        {
+            object errormsg;
+            string userType = "True";
+            if (!HttpUtilities.ValidateState(HttpContext, userType))
+            {
+                errormsg = "YOU ARE NOT LOGGED IN";
+                TempData["login_error"] = errormsg;
+                return RedirectToAction("Login", "User", errormsg);
+            }
+
+            int userId = int.Parse(HttpContext.Request.Cookies["user"]!.Split(",")[0]);
+            User user = userRepository.GetUser(userId)!;
+            Tuple<User, List<User>> tuple = new(user, userRepository.GetAllUsers());
+            return View(tuple);
+
         }
 
     }

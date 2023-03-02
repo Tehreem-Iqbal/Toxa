@@ -1,6 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ProjectManagementApplication.Data;
 using ProjectManagementApplication.Models;
+using ProjectManagementApplication.Models.Interfaces;
 using ProjectManagementApplication.Utilities;
 using System.Data;
 using System.Globalization;
@@ -11,7 +12,19 @@ namespace ProjectManagementApplication.Controllers
 {
     public class DashboardController : Controller
     {
-        
+        private readonly IUserRepository userRepository;
+        private readonly IProjectRepository projectRepository;
+        private readonly IServiceRepository serviceRepository;
+        private readonly IInvoiceRepository invoiceRepository;
+
+        DashboardController(IUserRepository _userRepository, IProjectRepository _projectRepository,
+                        IServiceRepository _serviceRepository, IInvoiceRepository _invoiceRepository)
+        {
+            userRepository = _userRepository;
+            projectRepository = _projectRepository;
+            invoiceRepository = _invoiceRepository;
+            serviceRepository = _serviceRepository;
+        }
         public IActionResult Index()
         {
             object errormsg;
@@ -23,13 +36,10 @@ namespace ProjectManagementApplication.Controllers
                 return RedirectToAction("Login", "User", errormsg);
             }
 
-            //User user = JsonSerializer.Deserialize<User>(HttpContext.Session.GetString("user")!)!;
             User user = JsonSerializer.Deserialize<User>((string)TempData["user"]!)!;
             int userId = int.Parse(HttpContext.Request.Cookies["user"]!.Split(",")[0]);
-            ProjectRepository repo = new(HttpContext,userId);
-            List<Project> projects = repo.RetrieveUserProjects(user);
+            List<Project> projects = projectRepository.GetUserProjects(user.Id);
             Tuple<User, List<Project>> tuple = new Tuple<User, List<Project>>(user, projects);
-            Console.WriteLine(tuple.Item1.UserName);
             return View(tuple);
         }
 
@@ -53,8 +63,7 @@ namespace ProjectManagementApplication.Controllers
                 service.Status = true;
                 service.CustomerId = int.Parse(HttpContext.Request.Cookies["user"]!.Split(",")[0]);
                 int userId = int.Parse(HttpContext.Request.Cookies["user"]!.Split(",")[0]);
-                ServiceRepository repo = new(HttpContext, userId);
-                repo.AddPurchasedService(service);
+                serviceRepository.AddPurchasedService(service);
                 return View("Services");
             }
             catch (DataException)

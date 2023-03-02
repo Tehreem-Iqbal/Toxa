@@ -7,33 +7,16 @@
 
 }
 
-@if (msg != null || (cred_msg != null))
-{
-    <div class="alert alert-dismissible alert-danger">
-        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
-        <strong>Oh snap!</strong>
-        @if (msg == "duplicate-user")
-        {
-            <p>This email has alread been registered.</p>
-        }
-        else if (msg == "file-error")
-        {
-            <p>This username has alread been occupied.</p>
-        }
-        else if(cred_msg == "cred-error")
-        {
-            <p>Email os Password is wrong. Forget Password? Ab kuch ni hoskta. SORRY</p>
-        }
-    </div>
 
     @if (msg == "success")
-    {
+        {
         <div class="alert alert-dismissible alert-success">
             <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
             <strong>SUCCESS!</strong> <p>You have successfully creaded acount</p>.
         </div>
-    }
-}
+        }
+
+
 <form method="post" action="login" enctype="multipart/form-data">
     <fieldset>
         <legend class="text-center">Login</legend>

@@ -1,19 +1,17 @@
 ﻿<Properties StartupConfiguration="{9E329ABF-7262-48C6-91B9-D41452EBA38F}|Default">
   <MonoDevelop.Ide.ItemProperties.ProjectManagementApplication PreferredExecutionTarget="/Applications/Google Chrome.app" />
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
-  </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MultiItemStartupConfigurations />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/AdminController.cs">
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Data/Dbcontext.cs">
     <Files>
-      <File FileName="Views/Admin/Index.cshtml" Line="44" Column="92" />
-      <File FileName="Data/ServiceRepository.cs" Line="39" Column="10" />
-      <File FileName="Data/ProjectRepository.cs" Line="63" Column="30" />
-      <File FileName="Data/UserRepository.cs" Line="108" Column="39" />
-      <File FileName="Controllers/AdminController.cs" Line="191" Column="26" />
-      <File FileName="Views/Admin/DisplayAllUsers.cshtml" Line="1" Column="31" />
+      <File FileName="Controllers/AdminController.cs" Line="70" Column="1" />
+      <File FileName="Controllers/UserController.cs" Line="13" Column="45" />
+      <File FileName="Utilities/HttpUtilities.cs" Line="10" Column="47" />
+      <File FileName="Views/Admin/AddProject.cshtml" Line="17" Column="60" />
+      <File FileName="Views/User/SignUp.cshtml" Line="30" Column="66" />
+      <File FileName="Models/Project.cs" Line="6" Column="33" />
+      <File FileName="Views/Admin/DisplayAllProjects.cshtml" Line="21" Column="27" />
+      <File FileName="Data/Dbcontext.cs" Line="55" Column="4" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
@@ -22,16 +20,22 @@
             <Node name="ProjectManagementApplication" expanded="True">
               <Node name="Controllers" expanded="True" />
               <Node name="Data" expanded="True" />
+              <Node name="Models" expanded="True">
+                <Node name="Interfaces" expanded="True" />
+              </Node>
+              <Node name="Utilities" expanded="True" />
               <Node name="Views" expanded="True">
-                <Node name="Admin" expanded="True">
-                  <Node name="DisplayAllUsers.cshtml" selected="True" />
-                </Node>
+                <Node name="Admin" expanded="True" />
+                <Node name="Dashboard" expanded="True" />
+                <Node name="Home" expanded="True" />
                 <Node name="Shared" expanded="True" />
+                <Node name="User" expanded="True" />
               </Node>
               <Node name="wwwroot" expanded="True">
-                <Node name="Images" expanded="True" />
                 <Node name="Uploads" expanded="True">
-                  <Node name="Users" expanded="True" />
+                  <Node name="Users" expanded="True">
+                    <Node name="ustaad g" expanded="True" />
+                  </Node>
                 </Node>
               </Node>
             </Node>
@@ -40,4 +44,11 @@
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
+  <Xamarin.Addins.Core.Project ActiveDebugTarget="MyAppleMacCatalystID" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore>
+      <Breakpoint file="/Users/ali/Toxa/Controllers/AdminController.cs" relfile="Controllers/AdminController.cs" line="70" column="1" />
+    </BreakpointStore>
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
 </Properties>

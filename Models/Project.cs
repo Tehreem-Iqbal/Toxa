@@ -14,6 +14,7 @@ namespace ProjectManagementApplication.Models
         [Required]
         public  int CustomerId { get; set; }
 
+        
         public int CompletionRate { get; set; }
         public bool ProjectStatus { get; set; } 
         //public DateTime StartDate { get; set; }

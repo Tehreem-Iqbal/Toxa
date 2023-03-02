@@ -18,11 +18,13 @@
     <None Remove="Microsoft.EntityFrameworkCore.Tools" />
     <None Remove="Models\Interfaces\" />
     <None Remove="Interfaces\" />
+    <None Remove="Controllers\APIs\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\Interfaces\" />
     <Folder Include="Interfaces\" />
     <Folder Include="wwwroot\Uploads\" />
+    <Folder Include="Controllers\APIs\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="wwwroot\Uploads\Users\Tehreem\CF29138B-9C40-41EC-BD66-AC0459D6BD33_1_105_c.jpeg" />

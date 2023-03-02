@@ -1,38 +1,38 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using ProjectManagementApplication.Models;
+using ProjectManagementApplication.Models.Interfaces;
 using System.Data;
 using System.Diagnostics.Eventing.Reader;
 using System.Globalization;
 using System.Linq;
 using System;
+using Microsoft.AspNetCore.Http;
+using System.Net.Http;
 
 namespace ProjectManagementApplication.Data
 {
-    public class UserRepository
+    public class UserRepository : IUserRepository
     {
-        private readonly HttpContext _httpContext;
-        private Dbcontext db;
-        public UserRepository(HttpContext httpContext, int userId)
-        {
-            db = new Dbcontext();
-            db.userId = userId;
+        private readonly Dbcontext db;
 
-            _httpContext = httpContext;
+        public UserRepository(Dbcontext dbcontext)
+        {
+            db = dbcontext;
         }
-        
+
         public string AddUser(User user)
         {
             try
             {
                 string msg;
-                if (DuplicateCheck(user.UserEmail!))
-                {
-                    msg = "duplicate-user";
-                    return msg;
-                }
                 if (!FileUpload(user.Image!, user.ImageURL!))
                 {
                     msg = "file-error";
+                    return msg;
+                }
+                if (DuplicateCheck(user.UserEmail!))
+                {
+                    msg = "duplicate-user";
                     return msg;
                 }
 
@@ -46,19 +46,49 @@ namespace ProjectManagementApplication.Data
                 throw new Exception($"User not added: {ex}");
             }
         }
-        private bool DuplicateCheck(string email)
+        public User? GetUser(int id)
         {
-
-            IEnumerable<User> CustomersList = RetrieveUsers();
-            foreach (User u in CustomersList)
-            {
-                if (email.Equals(u.UserEmail))
-                {
-                    return true;
-                }
-            }
-            return false;
+            return db.Users.Find(id);
         }
+        public string UpdateUser(User user)
+        {
+            try
+            {
+                string msg;
+                db.Users.Update(user);
+                db.SaveChanges();
+                msg = "success";
+                return msg;
+            }
+            catch (Exception ex)
+            {
+                throw new Exception($"User not Updated: {ex}");
+            }
+        }
+        public string RemoveUser(int userId)
+        {
+            string msg = "success";
+            User? user = GetUser(userId);
+            if(user == null)
+            {
+                return "fail";
+            }
+            db.Users.Remove(user);
+            db.SaveChanges();
+            return msg;
+        }
+
+        public List<User> GetAllUsers()
+        {
+            return db.Users.ToList<User>();
+        }
+        public int Count()
+        {
+            return db.Users.Count<User>();
+        }
+
+        // Helper Functions
+
         private bool FileUpload(IFormFile file, string path)
         {
             int index = path.LastIndexOf("/");
@@ -88,24 +118,19 @@ namespace ProjectManagementApplication.Data
                 throw new Exception("Failed saving file", ex);
             }
         }
+        private bool DuplicateCheck(string email)
+        {
 
-        public IEnumerable<User> RetrieveUsers()
-        {
-            return db.Users;
-        }
-        public User? RetrieveUser(int id)
-        {
-            return db.Users.Find(id);
-        }
-        public void RemoveUser(User user)
-        {
-            db.Users.Remove(user);
-            db.SaveChanges();
+            IEnumerable<User> CustomersList = GetAllUsers();
+            foreach (User u in CustomersList)
+            {
+                if (email.Equals(u.UserEmail))
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
-        public int Count()
-        {
-            return db.Users.Count<User>();
-        }
     }
 }

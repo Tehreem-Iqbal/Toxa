@@ -1,24 +1,24 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
 using ProjectManagementApplication.Models;
+using ProjectManagementApplication.Models.Interfaces;
+using ProjectManagementApplication.Utilities;
 using System.Data;
 using System.Globalization;
 using System.Linq;
 
 namespace ProjectManagementApplication.Data
 {
-    public class InvoiceRepository
+    public class InvoiceRepository : IInvoiceRepository
     {
-        private Dbcontext db;
-        private readonly HttpContext _httpContext;
-        public InvoiceRepository(HttpContext httpContext, int userId)
+        private readonly Dbcontext db;
+
+        public InvoiceRepository(Dbcontext dbcontext)
         {
-            _httpContext = httpContext;
-            db = new Dbcontext();
-            db.userId = userId;
+            db = dbcontext;
         }
         public void AddInvoice(Invoice invoice)
         {
-            string cookie = _httpContext.Request.Cookies["user"]!;
             db.Invoice.Add(invoice);
 
             db.SaveChanges();

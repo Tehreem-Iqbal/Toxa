@@ -32,12 +32,24 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vRGVsZXRlVXNlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/ali/Toxa/Views/Admin/DisplayAllProjects.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vRGlzcGxheUFsbFByb2plY3RzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ali/Toxa/Views/Admin/DisplayAllServices.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vRGlzcGxheUFsbFNlcnZpY2VzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/ali/Toxa/Views/Admin/DisplayAllUsers.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vRGlzcGxheUFsbFVzZXJzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ali/Toxa/Views/Admin/index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vaW5kZXguY3NodG1s
+[/Users/ali/Toxa/Views/Admin/EditProject.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vRWRpdFByb2plY3QuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/ali/Toxa/Views/Admin/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQWRtaW4vSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/ali/Toxa/Views/Admin/UserDetails.cshtml]
@@ -68,12 +80,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/ali/Toxa/Views/Shared/_LayoutAdminDashboard.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXRBZG1pbkRhc2hib2FyZC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/ali/Toxa/Views/Shared/_LayoutDashoard.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXREYXNob2FyZC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/ali/Toxa/Views/Shared/_LayoutLoginSignup.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXRMb2dpblNpZ251cC5jc2h0bWw=
+[/Users/ali/Toxa/Views/Shared/_LayoutForm.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19MYXlvdXRGb3JtLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/ali/Toxa/Views/Shared/_Services.cshtml]

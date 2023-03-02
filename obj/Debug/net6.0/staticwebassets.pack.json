@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets/Images/users-logo.png"
     },
     {
+      "Id": "/Users/ali/Toxa/wwwroot/Uploads/Users/Tehreem/white-bg-logo.jpg",
+      "PackagePath": "staticwebassets/Uploads/Users/Tehreem/white-bg-logo.jpg"
+    },
+    {
       "Id": "/Users/ali/Toxa/wwwroot/Uploads/Users/ali/CF29138B-9C40-41EC-BD66-AC0459D6BD33_1_105_c.jpeg",
       "PackagePath": "staticwebassets/Uploads/Users/ali/CF29138B-9C40-41EC-BD66-AC0459D6BD33_1_105_c.jpeg"
     },
@@ -29,8 +33,24 @@
       "PackagePath": "staticwebassets/Uploads/Users/ali/me_longhiars.JPG"
     },
     {
+      "Id": "/Users/ali/Toxa/wwwroot/Uploads/Users/asada/white-bg-logo.jpg",
+      "PackagePath": "staticwebassets/Uploads/Users/asada/white-bg-logo.jpg"
+    },
+    {
       "Id": "/Users/ali/Toxa/wwwroot/Uploads/Users/bcs/CF29138B-9C40-41EC-BD66-AC0459D6BD33_1_105_c.jpeg",
       "PackagePath": "staticwebassets/Uploads/Users/bcs/CF29138B-9C40-41EC-BD66-AC0459D6BD33_1_105_c.jpeg"
+    },
+    {
+      "Id": "/Users/ali/Toxa/wwwroot/Uploads/Users/hsk/white-bg-logo.jpg",
+      "PackagePath": "staticwebassets/Uploads/Users/hsk/white-bg-logo.jpg"
+    },
+    {
+      "Id": "/Users/ali/Toxa/wwwroot/Uploads/Users/qwerwqrwe/white-bg-logo.jpg",
+      "PackagePath": "staticwebassets/Uploads/Users/qwerwqrwe/white-bg-logo.jpg"
+    },
+    {
+      "Id": "/Users/ali/Toxa/wwwroot/Uploads/Users/ucp/white-bg-logo.jpg",
+      "PackagePath": "staticwebassets/Uploads/Users/ucp/white-bg-logo.jpg"
     },
     {
       "Id": "/Users/ali/Toxa/wwwroot/css/bootstrap.min.css",
