@@ -19,6 +19,26 @@ namespace ProjectManagementApplication.Data
         }
         public void AddProject(Project Proj)
         {
+
+            //List<Project> projects = db.Project.ToList<Project>();
+            //Array projectIds = projects.Select(p => p.Id).ToArray();
+
+            //int randNum;
+            //Random rnd = new Random();
+
+            //do
+            //{
+            //    randNum = rnd.Next(1, 101); // generate random number between 1-100 (inclusive)
+            //} while (Array.IndexOf(projectIds, randNum) != -1); // keep generating random numbers until one is not in the array
+
+            //Console.WriteLine($"Project {Proj.Name} is assigned {randNum} ID.");
+            //Proj.Id = randNum;
+
+            //var lastRow = db.Project.OrderByDescending(r => r.Id).FirstOrDefault();
+
+            //Proj.Id = 3;//lastRow.Id + 1;
+
+
             db.Project.Add(Proj);
 
             db.SaveChanges();
@@ -56,7 +76,8 @@ namespace ProjectManagementApplication.Data
         }
         public int Count()
         {
-            return db.Project.Count<Project>();
+
+            return db.Project.ToList<Project>().Count();
         }
     }
 

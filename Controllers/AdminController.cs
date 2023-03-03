@@ -51,7 +51,7 @@ namespace ProjectManagementApplication.Controllers
 
             int users_count = userRepository.Count();
             int services_count = serviceRepository.Count();
-            int projects_count = serviceRepository.Count();
+            int projects_count = projectRepository.Count();
 
             Tuple<int, int, int> info_tuple = new(projects_count, services_count, users_count);
             Tuple<User,List<Invoice>, Tuple<int,int,int>> tuple = new(user,invoices,info_tuple);
@@ -61,14 +61,13 @@ namespace ProjectManagementApplication.Controllers
         // Projects
         [HttpGet]
         public IActionResult AddProject() {
-            Console.WriteLine("Ustaad g very great.");
-
+            
             return View();
         }
         [HttpPost]
         public IActionResult AddProject(Project project)
         {
-                    Console.WriteLine("Ustaad g great.");
+            
             object errormsg;
             string userType = "True";
             if (!HttpUtilities.ValidateState(HttpContext, userType))
@@ -82,7 +81,6 @@ namespace ProjectManagementApplication.Controllers
             {
                 if (ModelState.IsValid)
                 {
-                    int userId = int.Parse(HttpContext.Request.Cookies["user"]!.Split(",")[0]);
                     projectRepository.AddProject(project);
                     TempData["success"] = "Project added successfully";
                     return RedirectToAction("Index", "Admin");
@@ -207,7 +205,7 @@ namespace ProjectManagementApplication.Controllers
                     serviceRepository.AddService(service);
                     successmsg = "Service added successfully";
                     ViewBag.success = successmsg;
-                    return View("Index");
+                    return RedirectToAction("Index");
                 }
             }
             catch (DataException)

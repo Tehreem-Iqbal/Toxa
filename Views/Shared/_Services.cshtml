@@ -1,19 +1,23 @@
 ﻿@model List<ProjectManagementApplication.Models.Service>
 
-<div class="row row-cols-1 row-cols-md-2 g-4 bg-light">
-    @foreach (var s in Model)
-    {
-
-        <div class="col">
-            <div class="card">
-                <!--<img src="..." class="card-img-top" alt="..."> -->
+<div class="col-md-10">
+    <div class="row row-cols-3 row-cols-md-2 row-cols-sm-1 mt-3">
+        @foreach (Service service in Model)
+        {
+            <div class="card mb-3 me-2 shadow-lg" style="max-width: 32%; padding: 0px;">
+                <h3 class="card-header bg-primary text-white">@service.Name</h3>
                 <div class="card-body">
-                    <h5 class="card-title">@s.Name</h5>
-                    <p class="card-text">@s.Description</p>
-                    <p class="card-text">@s.Charges</p>
+                    <!-- <h5 class="card-title">Special title treatment</h5> -->
+                    <h6 class="card-subtitle text-muted">Added on: @service.CreatedDate</h6>
                 </div>
-                <!--<button type="submit" class="btn btn-info text-center"> <a class="nav-link text-dark" asp-area="" asp-controller="Dashboard" asp-action="PurchaseService">PurchaseService</a> </button>-->
+
+                <div class="card-body">
+                    <p class="card-text">@service.Description</p>
+                    <form method="post" action="PurchaseService">
+                        <button type="submit" asp-route-serviceId="@service.Id" class="card-link btn btn-danger">Purchase</button>
+                    </form>
+                </div>
             </div>
-        </div>
-    }
+        }
+    </div>
 </div>

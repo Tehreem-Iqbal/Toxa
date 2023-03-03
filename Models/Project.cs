@@ -3,6 +3,7 @@ using System.ComponentModel.DataAnnotations;
 
 namespace ProjectManagementApplication.Models
 {
+    [Serializable]
     public class Project : FullAuditModel
     {
         [Required]

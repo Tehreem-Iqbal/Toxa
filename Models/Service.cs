@@ -2,6 +2,7 @@
 
 namespace ProjectManagementApplication.Models
 {
+    [Serializable]
     public class Service : FullAuditModel
     {
         [Required]

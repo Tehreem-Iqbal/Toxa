@@ -34,14 +34,14 @@ namespace ProjectManagementApplication.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult SignUp(User user)
+        public IActionResult SignUp([FromBody] User user)
         {
             try
             {
                 if (ModelState.IsValid)
                 {
                     AddCookie(user);
-                    user.UserType = true;
+                    user.UserType = false;
                     string userdir = "Uploads/Users/" + user.UserName;
                     user.ImageURL = userdir + "/" + user.Image!.FileName;
 
@@ -50,11 +50,11 @@ namespace ProjectManagementApplication.Controllers
                     ViewBag.msg = msg;
                     if(msg == "success")
                     {
-                        return View("Login");
+                        return Ok();
                     }
                     else
                     {
-                        return View();              
+                        return BadRequest();              
                     }
                 }
             }
@@ -63,7 +63,7 @@ namespace ProjectManagementApplication.Controllers
                 ModelState.AddModelError("", ex + 
                 "ERROR: Unable to create account. Try again, and if the problem persists contact system administrator.");
             }
-            return View(user); 
+            return BadRequest(); 
         }
 
         [HttpGet]
@@ -87,11 +87,17 @@ namespace ProjectManagementApplication.Controllers
                         if (_user.Password!.Equals(user.Password))
                         {
                             AddCookie(_user);
-                            TempData["user"] =JsonSerializer.Serialize(_user);
-                            return (_user.UserType) ?
-                                RedirectToAction("Index", "Admin") :
-                                RedirectToAction("Index", "Dashboard");
-                            
+                            TempData["user"] = JsonSerializer.Serialize(_user);
+                                Console.WriteLine("I am going to user Dashbaord.");
+                            if (_user.UserType)
+                            {
+                                return RedirectToAction("Index", "Admin");
+                            }
+                            else
+                            {
+                                return RedirectToAction("Index", "Dashboard");
+
+                            }
                         }
                     }
                 }

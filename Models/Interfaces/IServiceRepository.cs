@@ -12,6 +12,8 @@ namespace ProjectManagementApplication.Models.Interfaces
         Service? RetrieveService(int id);
         List<Service> GetAllServices();
         void UpdateService(Service service);
+        List<PurchasedServices> GetUserPurchasedServices(int userId);
+
     }
 }
 

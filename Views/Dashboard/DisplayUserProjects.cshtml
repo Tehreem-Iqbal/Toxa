@@ -2,7 +2,7 @@
 @model Tuple<User, List<Project>>;
 
 @{
-    Layout = "_LayoutAdminDashboard";
+    Layout = "_LayoutUserDashboard";
 }
 
 @section userinfo {
@@ -14,14 +14,10 @@
         </ul>
     </div>
 }
+
 <!-- Destaials Section -->
 <div class="col-md-10">
-    <h1>Projects</h1>
-    <div class="row pe-4" style="margin-left: 90%;">
-        <form method="get" action="/Admin/AddProject">
-            <button type="submit" class="btn btn-primary">Add New</button>
-        </form>
-    </div>
+    <h1>My Projects</h1>
     <div class="row row-cols-3 row-cols-md-3 px-3">
         @foreach (Project project in Model.Item2)
         {
@@ -42,12 +38,6 @@
                     {
                         <span class="badge rounded-pill bg-danger">Canceled</span>
                     }
-                </div>
-
-                <div class="card-body">
-                    <p class="card-text">@project.Description</p>
-                    <a asp-action="EditProject" asp-route-projectId="@project.Id" class="card-link btn btn-info">Edit</a>
-                    <a asp-action="DeleteProject" asp-route-projectId="@project.Id" class="card-link btn btn-danger">Delete</a>
                 </div>
             </div>
         }

@@ -2,6 +2,7 @@
 
 namespace ProjectManagementApplication.Models
 {
+    [Serializable]
     public class Invoice : FullAuditModel
     {
         public int CustomerId { get; set; }

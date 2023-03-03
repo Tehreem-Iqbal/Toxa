@@ -1,0 +1,32 @@
+﻿@model Project;
+@{
+    Layout = "_LayoutForm";
+}
+
+<form method="post" action="PlaceProject" enctype="multipart/form-data">
+    <fieldset>
+        <legend class="text-center">Place a Project</legend>
+
+
+        <div class="form-group">
+
+            <label class="col-form-label mt-4">Project Name</label>
+            <input asp-for="@Model.Name" type="text" class="form-control" placeholder="Enter Project Name">
+
+            <label class="col-form-label mt-4">Description</label>
+            <input asp-for="@Model.Description" type="text" class="form-control" placeholder="Enter Description">
+
+            <label class="col-form-label">Project Bid Price</label>
+            <div class="input-group mb-3">
+                <span class="input-group-text">Rs.</span>
+                <input asp-for="@Model.Cost" type="text" class="form-control" aria-label="Amount (to the nearest dollar)" placeholder="Enter Project Cost">
+                <span class="input-group-text">.00</span>
+            </div>
+
+        </div>
+        <div class="form-group text-center">
+            <button type="submit" class="btn btn-light mt-5">Place</button>
+            <a href="/Dashbaord/Index" class="btn btn-secondary mt-5">Cancel</a>
+        </div>
+    </fieldset>
+</form>

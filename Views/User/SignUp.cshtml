@@ -27,43 +27,68 @@
     </div>
 }
 
-<form method="post" action="SignUp" enctype="multipart/form-data">
+<script type="text/javascript">function submitSignup() {
+    var data_ = {
+        Email: $("#email").val(),
+        UserName: $("#name").val(),
+        Phone: $("#phone").val(),
+        Password: $("#phone").val(),
+        picture: document.getElementById("profilepicture").file; //get file input id
+    }
+    //console.log(data);
+    $.ajax({
+        type: 'POST',
+        url: 'User/Signup',
+        contentType: 'application/json; charset=utf-8',
+        data: data_,
+        success: function (result) {
+            alert('Successfully received Data ');
+            console.log(result);
+        },
+        error: function (res) {
+            alert('Failed to receive the Data'+res);
+            console.log('Failed ');
+        }
+    })
+}</script>
+
+<form enctype="multipart/form-data">
     <fieldset>
         <legend class="text-center">Login</legend>
 
 
         <div class="form-group">
             <label asp-for="UserEmail" class="form-label mt-2">Email</label>
-            <input asp-for="UserEmail" type="email" class="form-control shadow p-2" placeholder="Enter Email">
+            <input id ="email" asp-for="UserEmail" type="email" class="form-control shadow p-2" placeholder="Enter Email">
             <span asp-validation-for="UserEmail" class="invalid-feedback"></span>
         </div>
 
         <div class="form-group">
             <label asp-for="UserName" class="form-label mt-2">UserName</label>
-            <input asp-for="UserName" type="text" class="form-control shadow p-2" placeholder="Enter Username">
+            <input id ="name" asp-for="UserName" type="text" class="form-control shadow p-2" placeholder="Enter Username">
             <span asp-validation-for="UserName" class="invalid-feedback"></span>
         </div>
 
         <div class="form-group">
             <label asp-for="Phone" class="form-label mt-2">Phone</label>
-            <input asp-for="Phone" type="text" class="form-control shadow p-2" placeholder="Enter Phone Number">
+            <input id ="phone" asp-for="Phone" type="text" class="form-control shadow p-2" placeholder="Enter Phone Number">
             <span asp-validation-for="Phone" class="invalid-feedback"></span>
         </div>
 
         <div class="form-group">
             <label asp-for="Password" class="form-label mt-2">Password</label>
-            <input asp-for="Password" type="password" class="form-control shadow p-2" placeholder="Select a Password">
+            <input id ="password" asp-for="Password" type="password" class="form-control shadow p-2" placeholder="Select a Password">
             <span asp-validation-for="Password" class="invalid-feedback"></span>
         </div>
 
         <div class="form-group">
             <label asp-for="Image" class="form-label mt-2">Profile Picture</label>
-            <input asp-for="Image" type="file" class="form-control shadow p-2">
+            <input id="profilepicture"  asp-for="Image" type="file" class="form-control shadow p-2">
             <span asp-validation-for="Image" class="invalid-feedback"></span>
         </div>
         <span class="text-danger"> @ViewBag.msg</span>
         <div class="form-group text-center">
-            <button type="submit" class="btn btn-light mt-5">Sign Up</button>
+            <button type="submit" class="btn btn-light mt-5" onclick="submitSignup()">Sign Up</button>
             <p class="mt-4">
                 Already have account?
                 <a asp-controller="User" asp-action="Login" class="text-bg-primary">Login</a>

@@ -2,6 +2,7 @@
 
 namespace ProjectManagementApplication.Models
 {
+    [Serializable]
     public class PurchasedServices : FullAuditModel
     {
         public string? Name { get; set; }

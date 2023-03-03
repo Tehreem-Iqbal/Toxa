@@ -51,6 +51,20 @@ namespace ProjectManagementApplication.Data
             db.Service.Update(service);
             db.SaveChanges();
         }
+
+        public List<PurchasedServices> GetUserPurchasedServices(int userId)
+        {
+            List<PurchasedServices> purchasedServices = new List<PurchasedServices>();
+            IEnumerable<PurchasedServices> AllPurchasedServices = db.PurchasedServices;
+            foreach (PurchasedServices service in AllPurchasedServices)
+            {
+                if (service.CustomerId == userId)
+                {
+                    purchasedServices.Add(service);
+                }
+            }
+            return purchasedServices;
+        }
     }
 
 }

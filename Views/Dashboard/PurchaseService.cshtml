@@ -1,0 +1,19 @@
+﻿@model Tuple<User, List<Service>>;
+@{
+    Layout = "_LayoutUserDashboard";
+
+}
+
+@section userinfo {
+    <div class="dropdown">
+        <img src="~/@Model.Item1.ImageURL" alt="profile" class="rounded-circle" width="50" height="50">
+        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+            <li><a class="dropdown-item" asp-controller="User" asp-action="Profile">Profile</a></li>
+            <li><a class="dropdown-item" asp-controller="User" asp-action="Logout">Logout</a></li>
+        </ul>
+    </div>
+}
+
+<h2>Available Services</h2>
+
+@Html.Partial("_Services", Model.Item2);

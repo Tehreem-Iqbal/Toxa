@@ -12,7 +12,7 @@ using ProjectManagementApplication.Data;
 namespace ProjectManagementApplication.Migrations
 {
     [DbContext(typeof(Dbcontext))]
-    [Migration("20230209061019_InitialCreate")]
+    [Migration("20230302182216_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
