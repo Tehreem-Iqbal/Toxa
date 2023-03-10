@@ -18,7 +18,7 @@ namespace ProjectManagementApplication.Data
 		public DbSet<Invoice> Invoice { get; set; }
 		public DbSet<PurchasedServices> PurchasedServices { get; set; }
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder) =>
-			optionsBuilder.UseSqlServer(@"Server=localhost; Database=toxa; User Id=SA; Password=Khokhar640; TrustServerCertificate=True");
+			optionsBuilder.UseSqlServer(@"Server=localhost; Database=toxa; User Id=SA; Password=MUPasswors; TrustServerCertificate=True");
 
 		public int userId {get; set; }
 
